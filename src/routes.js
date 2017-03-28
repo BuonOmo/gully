@@ -1,4 +1,5 @@
 export default {
   '/': 'Home',
-  '/about': 'About'
+  '/artfact': 'About',
+  '/billeterie': 'Ticketing'
 }

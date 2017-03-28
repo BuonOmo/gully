@@ -7,19 +7,19 @@
         <nav>
             <ul>
                 <li>
-                    Programmation
+                    <v-link href="/">Programmation</v-link>
                 </li>
                 <li>
                     Infos pratiques
                 </li>
                 <li>
-                    Billeterie
+                    <v-link href="/billeterie">Billeterie</v-link>
                 </li>
                 <li>
                     Photos / Vidéos
                 </li>
                 <li>
-                    Association Artfact
+                    <v-link href="/artfact">Association Artfact</v-link>
                 </li>
                 <li>
                     Contact
