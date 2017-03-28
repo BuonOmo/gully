@@ -1,14 +1,42 @@
 <template>
-  <div class="container">
-    <ul>
-      <li>
-        <v-link href="/">Home</v-link>
-        <v-link href="/about">About</v-link>
-      </li>
-    </ul>
-
-    <slot></slot>
-  </div>
+    <div>
+        <h1 class="title">
+            Gully Sound #5
+        </h1>
+        <slot></slot>
+        <nav>
+            <ul>
+                <li>
+                    Programmation
+                </li>
+                <li>
+                    Infos pratiques
+                </li>
+                <li>
+                    Billeterie
+                </li>
+                <li>
+                    Photos / Vidéos
+                </li>
+                <li>
+                    Association Artfact
+                </li>
+                <li>
+                    Contact
+                </li>
+            </ul>
+        </nav>
+        <aside>
+            <ul>
+                <li><a href="https://www.facebook.com/artfactassociation/">
+                    <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                </a></li>
+                <li><a href="https://www.youtube.com/user/ThePCPTB">
+                    <i class="fa fa-youtube"></i>
+                </a></li>
+            </ul>
+        </aside>
+    </div>
 </template>
 
 <script>
@@ -21,11 +49,60 @@
   }
 </script>
 
-<style scoped>
-  .container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 15px 30px;
-    background: #f9f7f5;
-  }
+<style lang="sass">
+    @font-face {
+        font-family: 'title';
+        src: url('../fonts/CutMeOut3.ttf');
+    }
+
+    @font-face {
+        font-family: 'main';
+        src: url('../fonts/ABeeZee-Regular.otf');
+    }
+
+    * {
+        font-family: main;
+    }
+
+    h1 {
+        font-family: title;
+    }
+
+    nav {
+        box-sizing: border-box;
+        width: 99%;
+        position: absolute;
+        bottom: 0;
+
+        >ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+    }
+    aside {
+        position: absolute;
+        width: 99%;
+        top: 0;
+
+        a {
+            text-decoration: none;
+        }
+
+        >ul {
+            float: right;
+
+            >li {
+                display: inline;
+
+                &:first-child {
+                   margin-right: 4px;
+                }
+            }
+        }
+    }
+    ul {
+        list-style-type: none;
+    }
 </style>

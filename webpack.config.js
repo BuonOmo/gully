@@ -28,6 +28,10 @@ module.exports = {
         query: {
           name: '[name].[ext]?[hash]'
         }
+      },
+      {
+        test: /\.[ot]tf/,
+        loader: 'file-loader'
       }
     ]
   },
