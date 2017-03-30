@@ -10,29 +10,29 @@
                     <v-link href="/">Programmation</v-link>
                 </li>
                 <li>
-                    Infos pratiques
+                    <v-link href="/infos">Infos pratiques</v-link>
                 </li>
                 <li>
                     <v-link href="/billeterie">Billeterie</v-link>
                 </li>
                 <li>
-                    Photos / Vidéos
+                    <v-link href="/media">Photos / Vidéos</v-link>
                 </li>
                 <li>
                     <v-link href="/artfact">Association Artfact</v-link>
                 </li>
                 <li>
-                    Contact
+                    <v-link href="/contact">Contact</v-link>
                 </li>
             </ul>
         </nav>
         <aside>
             <ul>
                 <li><a href="https://www.facebook.com/artfactassociation/">
-                    <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                    <i class="fa fa-4 fa-facebook-official" aria-hidden="true"></i>
                 </a></li>
                 <li><a href="https://www.youtube.com/user/ThePCPTB">
-                    <i class="fa fa-youtube"></i>
+                    <i class="fa fa-4 fa-youtube"></i>
                 </a></li>
             </ul>
         </aside>
@@ -50,6 +50,15 @@
 </script>
 
 <style lang="sass">
+    $primary-color: snow;
+    .fa.fa-4 {
+        font-size: xx-large;
+    }
+    body {
+        background-image: url('../img/11.jpg');
+        background-size: cover;
+    }
+
     @font-face {
         font-family: 'title';
         src: url('../fonts/CutMeOut3.ttf');
@@ -61,30 +70,46 @@
     }
 
     * {
-        font-family: main;
+        font-family: main,serif;
+        color: $primary-color;
     }
 
     h1 {
-        font-family: title;
+        font-size: 5em;
+        font-family: title,cursive;
+        margin-top: 16px;
+        font-weight: normal;
     }
 
     nav {
+        background-color: $primary-color;
+        mix-blend-mode: screen;
+        * {
+            color: black;
+        }
         box-sizing: border-box;
-        width: 99%;
+        width: 100%;
         position: absolute;
         bottom: 0;
+        left: 0;
 
         >ul {
             display: flex;
             flex-direction: row;
             justify-content: space-around;
+            >li {
+                 font-variant: small-caps;
+                 font-size: x-large;
+                 font-weight: bolder;
+             }
         }
 
     }
     aside {
         position: absolute;
-        width: 99%;
+        width: 98%;
         top: 0;
+        left: 0;
 
         a {
             text-decoration: none;
