@@ -10,7 +10,8 @@
     "deploy": "surge --project . --domain gully.surge.sh"
   },
   "dependencies": {
-    "vue": "^2.0.0-beta.1"
+    "vue": "^2.0.0-beta.1",
+    "vue2-animate": "^1.0.4"
   },
   "devDependencies": {
     "babel-core": "^6.0.0",
