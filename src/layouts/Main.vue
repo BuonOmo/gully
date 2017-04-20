@@ -7,16 +7,16 @@
         <nav>
             <ul>
                 <li>
-                    <v-link href="/">Programmation</v-link>
-                </li>
-                <li>
-                    <v-link href="/infos">Infos pratiques</v-link>
+                    <v-link href="/programmation">Programmation</v-link>
                 </li>
                 <li>
                     <v-link href="/billeterie">Billeterie</v-link>
                 </li>
                 <li>
-                    <v-link href="/media">Photos / Vidéos</v-link>
+                    <v-link href="/infos">Infos pratiques</v-link>
+                </li>
+                <li>
+                    <v-link href="/photos">Photos / Vidéos</v-link>
                 </li>
                 <li>
                     <v-link href="/artfact">Association Artfact</v-link>
@@ -28,10 +28,10 @@
         </nav>
         <aside>
             <ul>
-                <li><a href="https://www.facebook.com/artfactassociation/">
+                <li><a href="https://www.facebook.com/artfactassociation/" target="_blank">
                     <i class="fa fa-4 fa-facebook-official" aria-hidden="true"></i>
                 </a></li>
-                <li><a href="https://www.youtube.com/user/ThePCPTB">
+                <li><a href="https://www.youtube.com/channel/UC5CBBUAr0w1HHjV4HxYSmSA" target="_blank">
                     <i class="fa fa-4 fa-youtube"></i>
                 </a></li>
             </ul>
@@ -54,8 +54,9 @@
     .fa.fa-4 {
         font-size: xx-large;
     }
+    /*                                                                                               BACKGROUND IMAGE */
     body {
-        background-image: url('../img/11.jpg');
+        background-image: url('../img/backgound-classique.jpg');
         background-size: cover;
     }
 

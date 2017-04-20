@@ -1,6 +1,6 @@
 <template>
   <main-layout>
-    <p>Welcome home</p>
+    <img src="/src/img/logo.png" width="30%">
   </main-layout>
 </template>
 
@@ -13,3 +13,10 @@
     }
   }
 </script>
+
+<style>
+  img {
+    display: block;
+    margin: auto;
+  }
+</style>

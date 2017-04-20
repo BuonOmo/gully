@@ -17,3 +17,10 @@
     }
   }
 </script>
+
+<style>
+    #haWidget {
+        display: block;
+        margin: auto;
+    }
+</style>
