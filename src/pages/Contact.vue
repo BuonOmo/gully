@@ -46,7 +46,7 @@
         font-size: xx-large;
         margin: auto;
         text-align: center;
-        margin-top: 20%;
+        margin-top: 15%;
         >div {
             width: 50%;
             &:first-child {

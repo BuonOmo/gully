@@ -1,6 +1,7 @@
 <template>
     <div>
-        <h1 class="title">
+        <div v-if="show" transition="fadeLeft">hello</div>
+        <h1 class="title" transition="fadeLeft">
             Gully Sound #5
         </h1>
         <slot></slot>
@@ -28,6 +29,9 @@
         </nav>
         <aside>
             <ul>
+                <li><a v-on:click="play()">
+                    <i class="fa fa-4 fa-play" aria-hidden="true"></i>
+                </a></li>
                 <li><a href="https://www.facebook.com/artfactassociation/" target="_blank">
                     <i class="fa fa-4 fa-facebook-official" aria-hidden="true"></i>
                 </a></li>
@@ -35,6 +39,9 @@
                     <i class="fa fa-4 fa-youtube"></i>
                 </a></li>
             </ul>
+            <p class="download-music" v-if="firstClick">
+                <a href="src/lo_gully-sound-system.mp3" download="Lo (BBC) - Gully Sound System.mp3">télécharger le mp3</a>
+            </p>
         </aside>
     </div>
 </template>
@@ -43,6 +50,27 @@
   import VLink from '../components/VLink.vue'
 
   export default {
+    data: function () {
+      return {
+        music: new Audio("src/lo_gully-sound-system.mp3"),
+        isPlaying: false,
+        firstClick: false,
+        neverClicked: true
+      }
+    },
+    methods: {
+        play () {
+
+          this.firstClick = this.neverClicked;
+          this.neverClicked = false;
+          if (!this.isPlaying) {
+            this.music.play();
+          } else {
+            this.music.pause();
+          }
+          this.isPlaying = !this.isPlaying;
+        }
+    },
     components: {
       VLink
     }
@@ -130,5 +158,11 @@
     }
     ul {
         list-style-type: none;
+    }
+    .download-music {
+        float: right;
+        margin-top: 20px;
+        margin-right: -20px;
+        font-size: large;
     }
 </style>
