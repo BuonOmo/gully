@@ -4,6 +4,6 @@ export default {
   '/artfact': 'About',
   '/billeterie': 'Ticketing',
   '/infos': 'Informations',
-  '/media': 'Media',
+  '/photos': 'Media',
   '/contact': 'Contact'
 }

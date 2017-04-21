@@ -8,7 +8,7 @@
         <nav>
             <ul>
                 <li>
-                    <v-link href="/programmation">Programmation</v-link>
+                    <v-link href="/">Programmation</v-link>
                 </li>
                 <li>
                     <v-link href="/billeterie">Billeterie</v-link>
