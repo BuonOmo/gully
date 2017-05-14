@@ -1,9 +1,5 @@
 <template>
     <div>
-        <div v-if="show" transition="fadeLeft">hello</div>
-        <h1 class="title" transition="fadeLeft">
-            Gully Sound #5
-        </h1>
         <slot></slot>
         <nav>
             <ul>
@@ -16,12 +12,12 @@
                 <li>
                     <v-link href="/infos">Infos pratiques</v-link>
                 </li>
-                <li>
-                    <v-link href="/photos">Photos / Vidéos</v-link>
-                </li>
-                <li>
-                    <v-link href="/artfact">Association Artfact</v-link>
-                </li>
+                <!--<li>-->
+                    <!--<v-link href="/photos">Photos / Vidéos</v-link>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<v-link href="/artfact">Association Artfact</v-link>-->
+                <!--</li>-->
                 <li>
                     <v-link href="/contact">Contact</v-link>
                 </li>
@@ -53,7 +49,6 @@
     data: function () {
       return {
         music: new Audio("src/lo_gully-sound-system.mp3"),
-        isPlaying: false,
         firstClick: false,
         neverClicked: true
       }
@@ -63,12 +58,11 @@
 
           this.firstClick = this.neverClicked;
           this.neverClicked = false;
-          if (!this.isPlaying) {
+          if (this.music.paused) {
             this.music.play();
           } else {
             this.music.pause();
           }
-          this.isPlaying = !this.isPlaying;
         }
     },
     components: {
