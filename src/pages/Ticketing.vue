@@ -12,6 +12,11 @@
   import MainLayout from '../layouts/Main.vue'
 
   export default {
+    mounted: function() {
+      document.getElementById('haWidget').addEventListener('load', () => {
+        document.getElementById('haPlaceholder').remove();
+      });
+    },
     components: {
       MainLayout
     }

@@ -1,6 +1,6 @@
 <template>
-  <main-layout>
-    <img src="/src/img/logo.png" width="30%">
+  <main-layout class="no-top-logo">
+    <img src="/src/img/logo.png" width="42%" class="center-logo">
   </main-layout>
 </template>
 
@@ -15,8 +15,8 @@
 </script>
 
 <style>
-  img {
+  .center-logo {
     display: block;
-    margin: auto;
+    margin: 7% auto auto;
   }
 </style>
