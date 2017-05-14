@@ -59,7 +59,7 @@
         firstClick: false,
         neverClicked: true,
         isPlaying: false,
-        background: 1
+        background: IMAGE_COUNT - 1
       }
     },
     created: function() {
@@ -112,13 +112,13 @@
         -webkit-transition: background-image .4s ease-in-out;
         transition: background-image .4s ease-in-out;
 
-        @for $i from 0 through 8 {
+        @for $i from 8 through 0 {
             &.background-#{$i} {
-                background-image: url('../img/'+$i+'.jpg');
+                background-image: url('../img/'+$i+'.jpg'), url('../img/'+($i+1)+'.jpg');
             }
         }
         &.background-9 {
-            background-image: url('../img/backgound-classique.jpg');
+            background-image: url('../img/9.jpg');
         }
     }
 
