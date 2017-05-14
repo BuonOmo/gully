@@ -9,7 +9,8 @@
     "predeploy": "npm run build",
     "deploy": "surge --project . --domain gullysound.fr",
     "surge": "surge",
-    "clean": "rm -rf dist node_modules"
+    "clean": "rm -rf dist node_modules",
+    "test": "echo No tests yet && exit 0"
   },
   "dependencies": {
     "vue": "^2.0.0-beta.1",
