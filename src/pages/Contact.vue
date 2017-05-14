@@ -8,22 +8,6 @@
                     <br><a href="mailto:asso.artfact@gmail.com">asso.artfact@gmail.com</a>
                 </p>
             </div>
-            <div>
-                <p>
-                    Président
-                    <br>
-                    Emeric Duclaux
-                </p>
-                <a class="smaller" href="mailto:emeric.duclaux@gmail.com">emeric.duclaux@gmail.com</a>
-            </div>
-            <div>
-                <p>
-                    Trésorier
-                    <br>
-                    Olivier Paquelet
-                </p>
-                <a class="smaller" href="mailto:olivier_paquelet@outlook.fr">Olivier_paquelet@outlook.fr</a>
-            </div>
         </div>
     </main-layout>
 </template>
