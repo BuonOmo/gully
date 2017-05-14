@@ -26,7 +26,7 @@
         <aside>
             <ul>
                 <li><a v-on:click="play()">
-                    <i class="fa fa-4 fa-play" aria-hidden="true"></i>
+                    <i class="fa fa-4" :class="isPlaying?'fa-pause':'fa-play'" aria-hidden="true"></i>
                 </a></li>
                 <li><a href="https://www.facebook.com/artfactassociation/" target="_blank">
                     <i class="fa fa-4 fa-facebook-official" aria-hidden="true"></i>
@@ -50,7 +50,8 @@
       return {
         music: new Audio("src/lo_gully-sound-system.mp3"),
         firstClick: false,
-        neverClicked: true
+        neverClicked: true,
+        isPlaying: false
       }
     },
     methods: {
@@ -63,6 +64,7 @@
           } else {
             this.music.pause();
           }
+          this.isPlaying = !this.music.paused;
         }
     },
     components: {
