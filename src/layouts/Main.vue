@@ -1,6 +1,6 @@
 <template>
     <div>
-        <img class="top-logo" src="/src/img/logo.png" width="150px">
+        <img class="top-logo" src="../img/logo.png" width="150px">
         <div class="background" :class="'background-' + background">
             <slot></slot>
             <nav>

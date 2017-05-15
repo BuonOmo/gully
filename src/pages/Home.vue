@@ -1,6 +1,6 @@
 <template>
   <main-layout class="no-top-logo">
-    <img src="/src/img/logo.png" width="42%" class="center-logo">
+    <img src="../img/logo.png" width="42%" class="center-logo">
   </main-layout>
 </template>
 
