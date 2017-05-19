@@ -55,7 +55,7 @@
   export default {
     data: function () {
       return {
-        music: new Audio("src/lo_gully-sound-system.mp3"),
+        music: new Audio("misc/lo_gully-sound-system.mp3"),
         firstClick: false,
         neverClicked: true,
         isPlaying: false,
