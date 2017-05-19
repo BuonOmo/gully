@@ -84,7 +84,7 @@
   .block {
     display: flex;
     flex-direction: column;
-    margin: 8px;
+    margin: 0 8px;
   }
 
   .text {

@@ -6,3 +6,6 @@ deploy:
   project: .
   domain: gullysound.fr
   skip_cleanup: true
+cache:
+  directories:
+    - node_modules
