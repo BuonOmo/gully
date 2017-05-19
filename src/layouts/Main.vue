@@ -1,6 +1,6 @@
 <template>
     <div>
-        <img class="top-logo" src="../img/logo.png" width="150px">
+        <v-link href="/" class="image-container"><img class="top-logo" src="../img/logo.png" width="150px"></v-link>
         <div class="background" :class="'background-' + background">
             <slot></slot>
             <nav>
@@ -15,10 +15,10 @@
                         <v-link href="/infos">Infos pratiques</v-link>
                     </li>
                     <!--<li>-->
-                        <!--<v-link href="/photos">Photos / Vidéos</v-link>-->
+                    <!--<v-link href="/photos">Photos / Vidéos</v-link>-->
                     <!--</li>-->
                     <!--<li>-->
-                        <!--<v-link href="/artfact">Association Artfact</v-link>-->
+                    <!--<v-link href="/artfact">Association Artfact</v-link>-->
                     <!--</li>-->
                     <li>
                         <v-link href="/contact">Contact</v-link>
@@ -55,14 +55,14 @@
   export default {
     data: function () {
       return {
-        music: new Audio("misc/lo_gully-sound-system.mp3"),
+        music: new Audio('misc/lo_gully-sound-system.mp3'),
         firstClick: false,
         neverClicked: true,
         isPlaying: false,
         background: IMAGE_COUNT - 1
       }
     },
-    created: function() {
+    created: function () {
       const self = this;
 
       setInterval(newImage, 5000);
@@ -71,17 +71,16 @@
       }
     },
     methods: {
-        play () {
-
-          this.firstClick = this.neverClicked;
-          this.neverClicked = false;
-          if (this.music.paused) {
-            this.music.play();
-          } else {
-            this.music.pause();
-          }
-          this.isPlaying = !this.music.paused;
+      play () {
+        this.firstClick = this.neverClicked;
+        this.neverClicked = false;
+        if (this.music.paused) {
+          this.music.play();
+        } else {
+          this.music.pause();
         }
+        this.isPlaying = !this.music.paused;
+      }
     },
     components: {
       VLink
@@ -91,6 +90,10 @@
 
 <style lang="sass">
     $primary-color: snow;
+    .image-container {
+        width: 30px;
+        height: 30px;
+    }
     .fa.fa-4 {
         font-size: xx-large;
     }

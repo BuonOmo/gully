@@ -3,7 +3,7 @@
         <div class="container">
             <i class="fa fa-refresh fa-spin fa-5x" id="haPlaceholder"></i>
             <iframe id="haWidget" src="https://www.helloasso.com/associations/artfact/evenements/festival-gully-sound-5/widget"
-                style="width:800px;height:650px;border:none;"></iframe>
+                style="width:80%;height:100%;border:none;"></iframe>
         </div>
     </main-layout>
 </template>
@@ -25,7 +25,9 @@
 
 <style>
     .container {
+        padding-top: 70px;
         position: relative;
+        height: 72%;
     }
     #haWidget {
         display: block;

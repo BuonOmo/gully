@@ -1,6 +1,10 @@
 import Vue from 'vue'
 import routes from './routes'
 
+Vue.filter('two_digits', function (value) {
+  return `0${value.toString()}`.slice(-2);
+});
+
 const app = new Vue({
   el: '#app',
   data: {
@@ -22,5 +26,4 @@ const app = new Vue({
 window.addEventListener('popstate', () => {
   app.currentRoute = window.location.pathname
 })
-
-// Background preloading
+window.app = app;
