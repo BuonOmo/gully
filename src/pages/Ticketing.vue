@@ -12,7 +12,7 @@
   import MainLayout from '../layouts/Main.vue'
 
   export default {
-    mounted: function() {
+    mounted() {
       document.getElementById('haWidget').addEventListener('load', () => {
         document.getElementById('haPlaceholder').remove();
       });

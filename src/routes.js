@@ -1,6 +1,6 @@
 export default {
   '/': 'Home',
-  '/programmation': '',
+  '/programmation': 'Programmation',
   '/artfact': 'About',
   '/billeterie': 'Ticketing',
   '/infos': 'Informations',

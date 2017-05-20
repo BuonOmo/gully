@@ -1,7 +1,7 @@
 {
-  "name": "vue-2.0-simple-routing-example",
-  "description": "A Vue.js project",
-  "author": "Chris Fritz <chrisvfritz@gmail.com>",
+  "name": "gully",
+  "description": "A Sound System festival",
+  "author": "Ulysse Buonomo <buonomo.ulysse@gmai.com>",
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --hot",

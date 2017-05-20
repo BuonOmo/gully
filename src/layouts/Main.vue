@@ -3,10 +3,10 @@
         <v-link href="/" class="image-container"><img class="top-logo" src="../img/logo.png" width="150px"></v-link>
         <div class="background" :class="'background-' + background">
             <slot></slot>
-            <nav>
+            <nav id="navbar">
                 <ul>
                     <li>
-                        <v-link href="/">Programmation</v-link>
+                        <v-link href="/programmation">Programmation</v-link>
                     </li>
                     <li>
                         <v-link href="/billeterie">Billeterie</v-link>
@@ -109,7 +109,6 @@
     }
     /*                                                                                               BACKGROUND IMAGE */
     .background {
-        padding: 8px;
         background-size: cover;
         height: 100vh;
         -webkit-transition: background-image .4s ease-in-out;
