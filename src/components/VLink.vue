@@ -35,8 +35,7 @@
   }
 </script>
 
-<style scoped>
-  .active {
-    color: cornflowerblue;
-  }
+<style lang="sass" scoped>
+  .active
+    color: cornflowerblue
 </style>

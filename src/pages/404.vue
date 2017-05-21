@@ -16,10 +16,9 @@
   }
 </script>
 
-<style scoped>
-  p {
-    margin: 30% auto auto;
-    display: block;
-    max-width: 600px;
-  }
+<style lang="sass" scoped>
+  p
+    margin: 30% auto auto
+    display: block
+    max-width: 600px
 </style>

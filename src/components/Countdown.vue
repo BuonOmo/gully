@@ -66,39 +66,33 @@
 </script>
 
 <style lang="sass" scoped>
-  @import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:400|Roboto:100);
+  @import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:400|Roboto:100)
 
-  .block-container {
-    width: 270px;
-    display: flex;
-    flex-direction: row;
-  }
+  .block-container
+    width: 270px
+    display: flex
+    flex-direction: row
 
-  .block-container:hover {
-    background: white;
-    .digit, .text {
-      color: black;
-    }
-  }
+  .block-container:hover
+    background: white
+    .digit, .text
+      color: black
 
-  .block {
-    display: flex;
-    flex-direction: column;
-    margin: 0 8px;
-  }
+  .block
+    display: flex
+    flex-direction: column
+    margin: 0 8px
 
-  .text {
-    font-family: 'Roboto Condensed', serif;
-    margin-top: 4px;
-    margin-bottom: 10px;
-    text-align: center;
-  }
+  .text
+    font-family: 'Roboto Condensed', serif
+    margin-top: 4px
+    margin-bottom: 10px
+    text-align: center
 
-  .digit {
-    color: #ecf0f1;
-    font-family: 'Roboto', serif;
-    font-size: xx-large;
-    margin: 5px;
-    text-align: center;
-  }
+  .digit
+    color: #ecf0f1
+    font-family: 'Roboto', serif
+    font-size: xx-large
+    margin: 5px
+    text-align: center
 </style>

@@ -21,16 +21,13 @@
 </script>
 
 <style lang="sass" scoped>
-  main {
-    min-height: 100vh;
-    padding: 30px 20px 20px;
-    margin: auto;
-    width: 800px;
-    max-width: 90%;
-
-    * {
-      color: black;
-    }
-    border-top: outset lightgray 1px;
-  }
+  main
+    min-height: 100vh
+    padding: 30px 20px 20px
+    margin: auto
+    width: 800px
+    max-width: 90%
+    border-top: outset lightgray 1px
+    *
+      color: black
 </style>

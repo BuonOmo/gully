@@ -23,20 +23,17 @@
   }
 </script>
 
-<style>
-    .container {
-        padding-top: 70px;
-        position: relative;
-        height: 72%;
-    }
-    #haWidget {
-        display: block;
-        margin: 74px auto auto;
-    }
-    #haPlaceholder {
-        position: absolute;
-        left: calc(50vw - 35px);
-        margin-top: 74px;
-        display: block;
-    }
+<style lang="sass">
+    .container
+        padding-top: 70px
+        position: relative
+        height: 72%
+    #haWidget
+        display: block
+        margin: 74px auto auto
+    #haPlaceholder
+        position: absolute
+        left: calc(50vw - 35px)
+        margin-top: 74px
+        display: block
 </style>

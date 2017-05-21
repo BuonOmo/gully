@@ -17,9 +17,8 @@
   }
 </script>
 
-<style>
-  .center-logo {
-    display: block;
-    margin: 7% auto auto;
-  }
+<style lang="sass">
+  .center-logo
+    display: block
+    margin: 7% auto auto
 </style>

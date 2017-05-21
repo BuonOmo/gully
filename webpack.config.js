@@ -32,8 +32,17 @@ module.exports = {
       {
         test: /\.[ot]tf/,
         loader: 'file-loader'
+      },
+      {
+        test: /\.sass$/,
+        loader: 'css?sourceMap!sass?indentedSyntax&sourceMap'
       }
     ]
+  },
+  vue: {
+    loaders: {
+      sass: 'vue-style!css?sourceMap!sass?indentedSyntax&sourceMap'
+    }
   },
   devServer: {
     historyApiFallback: true,
