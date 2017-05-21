@@ -2,8 +2,8 @@
   <div>
     <v-link href="/" class="image-container"><img class="top-logo" src="../img/logo.png" width="150px"></v-link>
     <div class="background" :class="'background-' + background">
-      <span class="arrow right"><i class="fa fa-4 fa-chevron-left"></i></span>
-      <span class="arrow left"><i class="fa fa-4 fa-chevron-right"></i></span>
+      <a class="arrow right" @click="previousImage()"><i class="fa fa-4 fa-chevron-left"></i></a>
+      <a class="arrow left" @click="nextImage()"><i class="fa fa-4 fa-chevron-right"></i></a>
       <slot></slot>
       <nav id="navbar">
         <ul>
@@ -55,7 +55,7 @@
   const IMAGE_COUNT = 10;
 
   export default {
-    data: function () {
+    data() {
       return {
         music: new Audio('misc/lo_gully-sound-system.mp3'),
         firstClick: false,
@@ -64,16 +64,9 @@
         background: IMAGE_COUNT - 1
       }
     },
-    created: function () {
-      const self = this;
 
-      setInterval(newImage, 5000);
-      function newImage() {
-        self.background = (self.background + 1) % IMAGE_COUNT;
-      }
-    },
     methods: {
-      play () {
+      play() {
         this.firstClick = this.neverClicked;
         this.neverClicked = false;
         if (this.music.paused) {
@@ -82,6 +75,14 @@
           this.music.pause();
         }
         this.isPlaying = !this.music.paused;
+      },
+
+      nextImage() {
+        this.background = (this.background + 1) % IMAGE_COUNT;
+      },
+
+      previousImage() {
+        this.background = (IMAGE_COUNT + this.background - 1) % IMAGE_COUNT;
       }
     },
     components: {
@@ -112,9 +113,11 @@
     display: none
 
   .arrow
+    cursor: pointer
     position: absolute
     top: 50%
-    margin: 8px  // not mandatory in each direction
+    margin: 8px
+    // not mandatory in each direction
     &.left
       right: 0
     &.right
