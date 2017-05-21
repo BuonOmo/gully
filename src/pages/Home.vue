@@ -1,7 +1,7 @@
 <template>
   <main-layout class="no-top-logo">
     <countdown date="Fri July 21 20:00:00 2017 UTC+2"></countdown>
-    <img src="../img/logo.png" height="60%" class="center-logo">
+    <img src="../img/logo.png" height="70%" class="center-logo">
   </main-layout>
 </template>
 
@@ -20,5 +20,5 @@
 <style lang="sass">
   .center-logo
     display: block
-    margin: 7% auto auto
+    margin: 3% auto auto
 </style>
