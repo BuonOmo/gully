@@ -38,7 +38,7 @@
                     </a></li>
                 </ul>
                 <p class="download-music">
-                    <a href="src/lo_gully-sound-system.mp3" download="Gully Sound System — Lo (Bhale Bacce Crew).mp3">
+                    <a href="misc/lo_gully-sound-system.mp3" download="Gully Sound System — Lo (Bhale Bacce Crew).mp3">
                         {{isPlaying ? 'Téléchargement libre' : 'Gully Sound System — Lo (Bhale Bacce Crew)'}}
                     </a>
                 </p>
