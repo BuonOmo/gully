@@ -2,6 +2,8 @@
     <div>
         <v-link href="/" class="image-container"><img class="top-logo" src="../img/logo.png" width="150px"></v-link>
         <div class="background" :class="'background-' + background">
+            <span class="arrow right"><i class="fa fa-4 fa-chevron-left"></i></span>
+            <span class="arrow left"><i class="fa fa-4 fa-chevron-right"></i></span>
             <slot></slot>
             <nav id="navbar">
                 <ul>
@@ -107,8 +109,23 @@
     .no-top-logo .top-logo {
         display: none;
     }
+    .arrow {
+        position: absolute;
+        top: 50%;
+        margin: 8px; // not mandatory in each direction
+
+        &.left {
+            right: 0;
+        }
+
+        &.right {
+            left: 0;
+        }
+    }
+
     /*                                                                                               BACKGROUND IMAGE */
     .background {
+        position: relative;
         background-size: cover;
         height: 100vh;
         -webkit-transition: background-image .4s ease-in-out;
