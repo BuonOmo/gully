@@ -2,8 +2,8 @@
   <div>
     <v-link href="/" class="image-container"><img class="top-logo" src="../img/logo.png" width="150px"></v-link>
     <div class="background" :class="'background-' + background">
-      <a class="arrow right" @click="previousImage()"><i class="fa fa-4 fa-chevron-left"></i></a>
-      <a class="arrow left" @click="nextImage()"><i class="fa fa-4 fa-chevron-right"></i></a>
+      <a class="arrow left" @click="previousImage()"><i class="fa fa-4 fa-chevron-left"></i></a>
+      <a class="arrow right" @click="nextImage()"><i class="fa fa-4 fa-chevron-right"></i></a>
       <slot></slot>
       <nav id="navbar">
         <ul>
@@ -96,9 +96,6 @@
   $primary-color: snow
   $image-count: 10
 
-  .image-container
-    width: 30px
-    height: 30px
 
   .fa.fa-4
     font-size: xx-large
@@ -106,7 +103,12 @@
   body
     margin: 0
 
+  .image-container
+    width: 30px
+    height: 30px
+
   .top-logo
+    z-index: 1
     position: absolute
     top: 0
 
@@ -119,10 +121,9 @@
     top: 50%
     // not mandatory in each direction
     margin: 8px
-    &.left
-      right: 0
-    &.right
-      left: 0
+    @each $side in left, right
+      &.#{$side}
+       #{$side}: 0
 
   /*                                                                                               BACKGROUND IMAGE   */
   .background
@@ -135,6 +136,7 @@
       &.background-#{$i}
         background-image: url("../img/" + $i + ".jpg")
 
+  /*                                                                                           FONTS AND GENERIC TAGS */
   @font-face
     font-family: 'title'
     src: url("../fonts/CutMeOut3.ttf")
@@ -147,12 +149,6 @@
     font-family: main, serif
     color: $primary-color
 
-  h1
-    font-size: 5em
-    font-family: title, cursive
-    margin-top: 16px
-    font-weight: normal
-
   nav
     background-color: $primary-color
     mix-blend-mode: screen
@@ -161,6 +157,7 @@
     position: absolute
     bottom: 0
     left: 0
+    border-bottom: outset lightgray 1px
     *
       color: black
     > ul
@@ -168,6 +165,7 @@
       display: flex
       flex-direction: row
       justify-content: space-around
+      list-style-type: none
       > li
         font-variant: small-caps
         font-size: x-large
@@ -186,9 +184,6 @@
         display: inline
         &:first-child
           margin-right: 4px
-
-  ul
-    list-style-type: none
 
   .download-music
     float: right

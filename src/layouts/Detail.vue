@@ -27,7 +27,17 @@
     margin: auto
     width: 800px
     max-width: 90%
-    border-top: outset lightgray 1px
     *
       color: black
+    p
+      text-align: justify
+    h1
+      &:first-letter
+        font-family: title, cursive
+    a
+      color: cornflowerblue
+      &:hover
+        color: darken(steelblue, 1)
+      &:visited
+        color: maroon
 </style>
