@@ -1,22 +1,20 @@
-# Gully-2
+# Gully [![Build Status](https://travis-ci.org/BuonOmo/gully.svg?branch=master)](https://travis-ci.org/BuonOmo/gully)
 
-Next readme comes from the original fork:
+Le site du gully-sound!
 
-# Vue 2.0 Simple Routing Example
+Il est possible d'utiliser `yarn` ou `npm` pour les dépendences.  Les contributions sont bienvenues.
+Vous pouvez me contacter par mail à buonomo.ulysse@gmail.com.
 
-> A simple example of routing with Vue 2.0 without using vue-router. This branch uses the raw HTML5 History API. For an example integrating a 3rd-party routing solution, see the [pagejs branch](https://github.com/chrisvfritz/vue-2.0-simple-routing-example/tree/pagejs).
+## Developpement
 
-## Build Setup
+Il suffit de lancer une tache et d'observer le résultat (réactualisé durant le développement) sur
+[localhost:8080](http://localhost:8080) :
 
-``` bash
-# install dependencies
-npm install
+    yarn run dev
 
-# serve with hot reload at localhost:8080
-npm run dev
+## Déploiement
 
-# build for production with minification
-npm run build
-```
+Celui-ci se fait automatiquement via `travis` lors des push sur la branche `master`. Il est aussi possible d'en
+déclancher un avec :
 
-For a detailed explanation of the build process, read the [docs for vue-loader](http://vuejs.github.io/vue-loader).
+    yarn run deploy
