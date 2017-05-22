@@ -18,7 +18,7 @@
     <p>
       Pour ceux qui viendraient en v&eacute;lo, l&rsquo;organisation s&rsquo;engage &agrave; offrir deux boissons par
       bicyclette mont&eacute;e&nbsp;!</p>
-    <h1>Camping</h1>
+    <h1>Camping forestier</h1>
     <p>
       Nous vous proposons un camping gratuit et ombrag&eacute; au plus pr&egrave;s du festival. Afin de profiter de tous
       les concerts, nous vous invitons &agrave; rester dormir la nuit sur place. Bonheur et s&eacute;curit&eacute;
@@ -27,10 +27,10 @@
       voiture sur le parking mise &agrave; part pour les camions am&eacute;nag&eacute;s. Dans un esprit de bienveillance
       nous demandons aux festivaliers de ne pas installer des syst&egrave;mes sonores sur le parking ou le camping.&nbsp;
     </p>
-    <h1>Au Gully Sound, on mange quoi&nbsp;? On boit quoi&nbsp;?</h1>
+    <h1>Au Gully Sound, qu'est ce qu'on trouve au menu&nbsp;?</h1>
     <p>
       Plusieurs stands de restaurations seront pr&eacute;sents pour le plus grand plaisir de vos papilles.
-      Sucr&eacute;e, sal&eacute;e, viandard, v&eacute;g&eacute;tarien, il y en aura pour tous les go&ucirc;ts.
+      Sucr&eacute;, sal&eacute;, viandard, v&eacute;g&eacute;tarien, il y en aura pour tous les go&ucirc;ts à des prix abordables.
       Du cot&eacute; des boissons, on retrouvera notre traditionnelle bi&egrave;re artisanale &agrave; toujours 2&euro;
       le demi. Vins et jus de fruit seront &eacute;galement propos&eacute;s. Les paiements se font en Gully, la monnaie
       locale du festival. Nous acceptons pour les entr&eacute;es et les jetons la carte bancaire.&nbsp;
@@ -56,15 +56,15 @@
       <li>Animaux (sauf chiens guides)</li>
       <li>Grands sacs-&agrave;-dos (de type camping)</li>
       <li>Tentes</li>
-      <li>Pointeurs au laser</li>
+      <li>Pointeurs laser</li>
       <li>Les animaux</li>
       <li>&Eacute;quipement d'enregistrement audio/vid&eacute;o professionnel</li>
-      <li>Armes &agrave; feux, couteaux, armes de tous genres</li>
+      <li>Armes &agrave; feux, couteaux, armes en tous genres</li>
       <li>Tout objet pouvant causer des blessures</li>
     </ul>
     <p>LES INTERDITS SUR LE CAMPING ET LE PARKING</p>
     <ul>
-      <li>R&eacute;chaud et toute bouteille de gaz&nbsp;??</li>
+      <li>R&eacute;chauds et toutes bouteilles de gaz&nbsp;</li>
       <li>Feux et barbecues</li>
       <li>Armes &agrave; feux, grands couteaux, armes de tous genres</li>
       <li>Groupes &eacute;lectrog&egrave;nes et syst&egrave;mes sonores (caissons)</li>
@@ -90,8 +90,8 @@
       Le festival Gully Sound est ouvert aux artistes et &agrave; toutes formes de cr&eacute;ation et de plaisir. Un
       espace slackline sera pr&eacute;sent mais vous pouvez apporter la v&ocirc;tre, on trouvera un joli spot ensemble.
       M&ecirc;me principe pour les graffitis, un mur sera d&eacute;di&eacute; &agrave; cette activit&eacute;, vous
-      pouvez apporter votre mat&eacute;riel de peinture. Bien s&ucirc;r, merci de ne pas d&eacute;grader les autres
-      infrastructures n&rsquo;ont pr&eacute;vues &agrave; cet effet. Les amateurs de cirque sont la bienvenus, nous
+      pouvez apporter votre mat&eacute;riel de peinture. Bien &eacute;videmment, merci de ne pas d&eacute;grader les autres
+      infrastructures non pr&eacute;vues &agrave; cet effet. Les amateurs de cirque sont la bienvenus, nous
       avons malheureusement pas de mat&eacute;riel &agrave; pr&ecirc;ter. Pour toutes autres demandes
       d&rsquo;activit&eacute;s merci de nous contacter &agrave;
       <a href="mailto:asso.artfact@gmail.com">asso.artfact@gmail.com</a>.
@@ -122,7 +122,7 @@
       susceptibles de vous prendre en photo pour nos outils de communication, nos r&eacute;seaux sociaux et notre site
       web. Si une photo de vous, a &eacute;t&eacute; publi&eacute;e et que vous souhaitez qu&rsquo;elle soit
       retir&eacute;e, merci de formuler votre demande par mail &agrave;
-      <a href="mailto:asso.artfact@gmail.com">asso.artfact@gmail.com</a>
+      <a href="mailto:asso.artfact@gmail.com">asso.artfact@gmail.com</a>.
       Nous proc&eacute;derons au retrait dans les plus brefs d&eacute;lais.
     </p>
   </detail-layout>
