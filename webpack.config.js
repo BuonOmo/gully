@@ -23,15 +23,11 @@ module.exports = {
         exclude: /node_modules/
       },
       {
-        test: /\.(png|jpe?g|gif|svg)$/i,
+        test: /\.(png|jpe?g|gif|svg|[ot]tf|mp3)$/i,
         loader: 'file',
         query: {
           name: '[name].[ext]?[hash]'
         }
-      },
-      {
-        test: /\.[ot]tf/,
-        loader: 'file-loader'
       },
       {
         test: /\.sass$/,

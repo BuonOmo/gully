@@ -40,7 +40,7 @@
           </a></li>
         </ul>
         <p class="download-music">
-          <a href="misc/lo_gully-sound-system.mp3" download="Gully Sound System — Lo (Bhale Bacce Crew).mp3">
+          <a :href="music.src" download="Gully Sound System — Lo (Bhale Bacce Crew).mp3">
             {{isPlaying ? 'Téléchargement libre' : 'Gully Sound System — Lo (Bhale Bacce Crew)'}}
           </a>
         </p>
@@ -51,13 +51,14 @@
 
 <script>
   import VLink from '../components/VLink.vue'
+  import MUSIC_FILE from '../lo_gully-sound-system.mp3'
 
   const IMAGE_COUNT = 10;
 
   export default {
     data() {
       return {
-        music: new Audio('misc/lo_gully-sound-system.mp3'),
+        music: new Audio(MUSIC_FILE),
         firstClick: false,
         neverClicked: true,
         isPlaying: false,
@@ -130,9 +131,9 @@
     height: 100vh
     -webkit-transition: background-image .4s ease-in-out
     transition: background-image .4s ease-in-out
-    @for $i from $image-count - 1 through 0
+    @for $i from 0 through $image-count - 1
       &.background-#{$i}
-        background-image: url("../img/" + $i + ".jpg"), url("../img/" + (($i + 1) % $image-count) + ".jpg")
+        background-image: url("../img/" + $i + ".jpg")
 
   @font-face
     font-family: 'title'
