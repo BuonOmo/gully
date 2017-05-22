@@ -27,3 +27,10 @@ window.addEventListener('popstate', () => {
   app.currentRoute = window.location.pathname
 })
 window.app = app;
+
+/* Preload images */
+for (let i = 0; i < 10; i++) {
+  var url = require(`./img/${i}.jpg`);
+  var img = new Image();
+  img.src = url;
+}

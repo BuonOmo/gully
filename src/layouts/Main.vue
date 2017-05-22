@@ -116,8 +116,8 @@
     cursor: pointer
     position: absolute
     top: 50%
-    margin: 8px
     // not mandatory in each direction
+    margin: 8px
     &.left
       right: 0
     &.right
