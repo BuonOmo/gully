@@ -33,9 +33,9 @@
         font-family: title
       @for $i from 0 through 2
         >span:nth-of-type(#{$i + 1})
-          -webkit-animation: blur 2s $i*0.3s 41 alternate
-          -o-animation: blur 2s $i*0.3s 41 alternate
-          animation: blur 2s $i*0.3s 41 alternate
+          -webkit-animation: blur 2s $i*0.3s infinite alternate
+          -o-animation: blur 2s $i*0.3s infinite alternate
+          animation: blur 2s $i*0.3s infinite alternate
 
   @keyframes blur
     from
