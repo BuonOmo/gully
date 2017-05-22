@@ -1,39 +1,25 @@
 <template>
-    <main-layout>
-        <div class="container">
-            <i class="fa fa-refresh fa-spin fa-5x" id="haPlaceholder"></i>
-            <iframe id="haWidget" src="https://www.helloasso.com/associations/artfact/evenements/festival-gully-sound-5/widget"
-                style="width:80%;height:100%;border:none;"></iframe>
-        </div>
-    </main-layout>
+  <detail-layout>
+    <iframe id="haWidget" src="https://www.helloasso.com/associations/artfact/evenements/festival-gully-sound-5/widget">
+    </iframe>
+  </detail-layout>
 </template>
 
 <script>
-  import MainLayout from '../layouts/Main.vue'
+  import DetailLayout from '../layouts/Detail.vue'
 
   export default {
-    mounted() {
-      document.getElementById('haWidget').addEventListener('load', () => {
-        document.getElementById('haPlaceholder').remove();
-      });
-    },
     components: {
-      MainLayout
+      DetailLayout
     }
   }
 </script>
 
 <style lang="sass">
-    .container
-        padding-top: 70px
-        position: relative
-        height: 72%
-    #haWidget
-        display: block
-        margin: 74px auto auto
-    #haPlaceholder
-        position: absolute
-        left: calc(50vw - 35px)
-        margin-top: 74px
-        display: block
+  #haWidget
+    display: block
+    margin: 74px auto auto
+    width: 100%
+    border: none
+    height: 1200px
 </style>

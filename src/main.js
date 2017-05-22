@@ -11,14 +11,14 @@ const app = new Vue({
     currentRoute: window.location.pathname
   },
   computed: {
-    ViewComponent () {
+    ViewComponent() {
       const matchingView = routes[this.currentRoute]
       return matchingView
         ? require('./pages/' + matchingView + '.vue')
         : require('./pages/404.vue')
     }
   },
-  render (h) {
+  render(h) {
     return h(this.ViewComponent)
   }
 })
@@ -30,7 +30,7 @@ window.app = app;
 
 /* Preload images */
 for (let i = 0; i < 10; i++) {
-  var url = require(`./img/${i}.jpg`);
-  var img = new Image();
+  let url = require(`./img/${i}.jpg`);
+  let img = new Image();
   img.src = url;
 }
