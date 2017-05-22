@@ -62,7 +62,13 @@
         firstClick: false,
         neverClicked: true,
         isPlaying: false,
-        background: IMAGE_COUNT - 1
+        background: +sessionStorage.getItem('GULLY_background') || IMAGE_COUNT - 1
+      }
+    },
+
+    watch: {
+      background(newValue) {
+        sessionStorage.setItem('GULLY_background', newValue);
       }
     },
 
@@ -86,6 +92,7 @@
         this.background = (IMAGE_COUNT + this.background - 1) % IMAGE_COUNT;
       }
     },
+
     components: {
       VLink
     }
@@ -95,7 +102,6 @@
 <style lang="sass">
   $primary-color: snow
   $image-count: 10
-
 
   .fa.fa-4
     font-size: xx-large
@@ -116,14 +122,17 @@
     display: none
 
   .arrow
+    opacity: 0.4
     cursor: pointer
     position: absolute
     top: 50%
     // not mandatory in each direction
     margin: 8px
+    &:hover
+      opacity: 10
     @each $side in left, right
       &.#{$side}
-       #{$side}: 0
+        #{$side}: 0
 
   /*                                                                                               BACKGROUND IMAGE   */
   .background

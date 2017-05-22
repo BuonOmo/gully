@@ -68,15 +68,11 @@
 <style lang="sass" scoped>
   @import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:400|Roboto:100)
 
+
   .block-container
     width: 270px
     display: flex
     flex-direction: row
-
-  .block-container:hover
-    background: white
-    .digit, .text
-      color: black
 
   .block
     display: flex
