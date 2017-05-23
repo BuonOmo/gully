@@ -24,7 +24,6 @@
 
 <script>
   export default {
-
     created() {
       window.setInterval(() => {
         this.now = Math.trunc(Date.now() / 1000);
