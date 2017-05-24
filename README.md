@@ -7,7 +7,7 @@ Vous pouvez me contacter par mail à buonomo.ulysse@gmail.com.
 
 ## Developpement
 
-Il suffit de lancer une tache et d'observer le résultat (réactualisé durant le développement) sur
+Il suffit de lancer la tâche suivante et d'observer le résultat (réactualisé durant le développement) sur
 [localhost:8080](http://localhost:8080) :
 
     yarn run dev
