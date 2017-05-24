@@ -26,7 +26,7 @@
     min-height: 100vh
     padding: 30px 20px 20px
     margin: auto
-    width: 800px
+    width: 900px
     max-width: 90%
     *
       color: black

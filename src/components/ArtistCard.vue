@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper" :class="image"><span class="close"></span>
     <div></div><span class="text">
-    <p>{{ name.toUpperCase() }}</p></span>
+    <p>{{ title }}</p></span>
   </div>
 </template>
 
@@ -16,24 +16,37 @@
 
     data() {
       return {
-        image: this.name.toLowerCase().replace(/ /g, '_')
+        image: this.name
+      }
+    },
+
+    computed: {
+      title() {
+        return this.name.toUpperCase().replace(/_/g, ' ');
       }
     }
   }
 </script>
 
 <style lang="sass" scoped>
-  $images: atomic blazeup brainlesse conquering_sound dreadsqaud missah_et_weedo ragga_youth_posse rakoon red_rockers skankin soom_t_2
+  $images: soom_t_ft_zion_high_foundation missah_et_weedo red_rockers_digital_band blaze_up_sound brainless_sound
+  $images: join($images, earlydays_sound_ft_ghosthrider emka_loman ragga_youths_posse rakoon atomic_spliff)
+  $images: join($images, conquering_sound_ft_sir_jean skankin_sound_ft_mc_akro_ft_mista_t dreadsquad_ft_kasia_malenda)
+  $card-size: 280px
 
   @each $image in $images
     .#{$image}
       background-image: url('../img/artists/#{$image}.jpg')
       background-size: contain
 
+  .wrapper.earlydays_sound_ft_ghosthrider .text
+    bottom: 180px
+
   .wrapper
+    margin: 10px
     position: relative
-    width: 300px
-    height: 300px
+    width: $card-size
+    height: $card-size
 
     div
       width: 100%
@@ -43,22 +56,21 @@
       border: 4px groove
 
     &:hover .text
-      transform: translate(54.2px) scale(1.6)
+      transform: translate($card-size*0.18) scale(1.6)
 
     .text
       transition: transform 0.3s ease
       text-align: center
       position: absolute
-      bottom: 14px
+      bottom: 28px
       left: 4px
-      font-size: 2em
       background-color: #eee
       padding: 4px
       mix-blend-mode: hard-light
       >p
         font-family: title
-        font-size: .7em
-        width: 175px
+        font-size: 1.2em
+        width: $card-size*0.58
         color: black
         margin: 0
 
