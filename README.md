@@ -15,6 +15,6 @@ Il suffit de lancer une tache et d'observer le résultat (réactualisé durant l
 ## Déploiement
 
 Celui-ci se fait automatiquement via `travis` lors des push sur la branche `master`. Il est aussi possible d'en
-déclancher un avec :
+déclencher un avec :
 
     yarn run deploy
