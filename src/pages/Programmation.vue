@@ -8,6 +8,8 @@
     <div class="card-container"><artist-card :name="artist" v-for="artist in artists.saturdayPM"></artist-card></div>
     <p>Vous pouvez aussi télécharger le détail de la programmation au format pdf
       <a :href="progFile" download="Programmation.jpg">ici</a>&nbsp;!</p>
+       <h1>Aperçu de l'édition 2016</h1>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/IJFo8U2U7SQ" frameborder="0" allowfullscreen></iframe>
   </detail-layout>
 </template>
 
