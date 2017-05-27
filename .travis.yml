@@ -1,10 +1,13 @@
 language: node_js
 node_js: 7
-script: yarn run build
+script:
+  - export DOMAIN_URL=$( [[ $TRAVIS_BRANCH = release ]] && echo gullysound.fr || echo gully.surge.sh )
+  - echo The site will be deployed under $DOMAIN_URL
+  - yarn run build
 deploy:
   provider: surge
   project: .
-  domain: gullysound.fr
+  domain: $DOMAIN_URL
   skip_cleanup: true
 cache:
   directories:

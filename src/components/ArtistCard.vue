@@ -1,21 +1,45 @@
 <template>
-  <div class="wrapper" :class="picture"><span class="close"></span>
-    <div></div><span class="text">
-    <p>{{ title }}</p></span>
+  <div>
+    <div class="wrapper" :class="artist.ref" @click="showModal()"><span class="close"></span>
+      <div></div><span class="text"><p>{{ artist.title }}</p></span>
+    </div>
+    <modal-component v-if="isModal" @close="hideModal()">
+      <h1 slot="header">
+        {{ artist.title }}
+        <span>
+          <a :href="artist.site" target="_blank"><i class="fa fa-facebook"></i></a>
+          <a :href="artist.music" target="_blank"><i class="fa fa-play"></i></a>
+        </span>
+      </h1>
+      <div slot="body" v-text="artist.description"></div>
+    </modal-component>
   </div>
 </template>
 
 <script>
+  import ModalComponent from './Modal.vue'
+
   export default {
     props: {
-      picture: {
-        type: String,
+      artist: {
+        type: Object,
         required: true
       },
-      title: {
-        type: String,
-        required: true
+    },
+
+    components: {
+      ModalComponent
+    },
+
+    data() {
+      return {
+        isModal: false
       }
+    },
+
+    methods: {
+      showModal() { this.isModal = true },
+      hideModal() { this.isModal = false }
     }
   }
 </script>

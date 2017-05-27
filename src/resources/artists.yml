@@ -47,6 +47,15 @@ saturdayPM:
   - 
     ref: rakoon
     title: "Rakoon"
+    site: https://www.facebook.com/rakoondub/
+    music: https://www.youtube.com/watch?v=af1OkJgSoQM
+    description: |
+      C’est un animal pas comme les autres. Il se nourrit essentiellement de
+      rythmes trance, de guitare rock, d’accents psychédéliques et de
+      structures pop, le tout associé à des skanks et des basslines
+      électroniques. Son univers électro dub illustre un caractère joyeux et
+      rebondissant qui permet de voyager et de partager de nombreux moments de
+      bonheur.
   - 
     ref: atomic_spliff
     title: "Atomic Spliff"
