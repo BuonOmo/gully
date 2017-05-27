@@ -32,6 +32,8 @@
   $images: soom_t_ft_zion_high_foundation missah_et_weedo red_rockers_digital_band blaze_up_sound brainless_sound
   $images: join($images, earlydays_sound_ft_ghosthrider emka_loman ragga_youths_posse rakoon atomic_spliff)
   $images: join($images, conquering_sound_ft_sir_jean skankin_sound_ft_mc_akro_ft_mista_t dreadsquad_ft_kasia_malenda)
+  $images: join($images, dancehall graf jeux_libres sound_systems_locaux foot irie_ites slackline)
+
   $card-size: 280px
 
   @each $image in $images
@@ -68,21 +70,9 @@
       padding: 4px
       mix-blend-mode: hard-light
       >p
-        font-family: title
+        font-family: title, serif
         font-size: 1.2em
         width: $card-size*0.58
         color: black
         margin: 0
-
-    &:hover .close
-      z-index: 2
-      cursor: pointer
-      background-color: #eee
-      mix-blend-mode: screen
-      position: absolute
-      border-bottom-left-radius: 20%
-      top: 0
-      right: 0
-      content: url(https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_clear_black_36px.svg)
-      height: 36px
 </style>

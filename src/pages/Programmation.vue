@@ -32,12 +32,18 @@
             'blaze_up_sound'
           ],
           saturdayAM: [
-            'emka_loman'
+            'sound_systems_locaux',
+            'dancehall',
+            'emka_loman',
+            'foot',
+            'slackline',
+            'graf'
           ],
           saturdayPM: [
             'dreadsquad_ft_kasia_malenda',
             'rakoon',
             'atomic_spliff',
+            'irie_ites',
             'earlydays_sound_ft_ghosthrider',
             'ragga_youths_posse',
             'skankin_sound_ft_mc_akro_ft_mista_t'
