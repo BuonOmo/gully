@@ -1,5 +1,8 @@
 import Vue from 'vue'
 import routes from './routes'
+import ScrollPolyfill from 'smoothscroll-polyfill'
+
+ScrollPolyfill.polyfill();
 
 Vue.filter('two_digits', function (value) {
   return `0${value.toString()}`.slice(-2);

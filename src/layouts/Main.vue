@@ -156,7 +156,12 @@
 
   *
     font-family: main, serif
-    color: $primary-color
+
+  .background
+    *
+      color: $primary-color
+    nav *
+      color: black
 
   nav
     background-color: $primary-color
@@ -167,8 +172,6 @@
     bottom: 0
     left: 0
     border-bottom: outset lightgray 1px
-    *
-      color: black
     > ul
       margin: 5px
       display: flex
