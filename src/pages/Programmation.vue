@@ -2,14 +2,14 @@
   <detail-layout>
     <h1>Vendredi 21 juillet 20h-3h</h1>
     <div class="card-container"><artist-card :name="artist" v-for="artist in artists.friday"></artist-card></div>
-    <h1>Samedi 22 juillet après-midi 12h-19h</h1>
+    <h1>Samedi 22 juillet 12h-19h</h1>
     <div class="card-container"><artist-card :name="artist" v-for="artist in artists.saturdayAM"></artist-card></div>
     <h1>Samedi 22 juillet 20h-5h</h1>
     <div class="card-container"><artist-card :name="artist" v-for="artist in artists.saturdayPM"></artist-card></div>
     <p>Vous pouvez aussi télécharger le détail de la programmation
       <a :href="progFile" download="Programmation.jpg">ici</a>&nbsp;!</p>
-       <h1>Aperçu de l'édition 2016</h1>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/IJFo8U2U7SQ" frameborder="0" allowfullscreen></iframe>
+    <h1>Aperçu de l'édition 2016</h1>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/IJFo8U2U7SQ" frameborder="0" allowfullscreen></iframe>
   </detail-layout>
 </template>
 
@@ -61,7 +61,7 @@
 
 <style lang="sass" scoped>
   h1
-    font-family: title
+    font-family: title, serif
     font-size: 3em
 
   .card-container

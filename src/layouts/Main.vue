@@ -182,6 +182,14 @@
         font-variant: small-caps
         font-size: x-large
         font-weight: bolder
+      @media screen and (orientation: portrait)
+        flex-flow: column wrap
+        align-items: center
+        align-content: stretch
+        max-height: 8em
+        > li
+          text-align: center
+          font-size: 3em
 
   aside
     position: absolute
