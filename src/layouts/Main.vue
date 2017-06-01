@@ -183,7 +183,7 @@
         font-size: x-large
         font-weight: bolder
       @media screen and (orientation: portrait)
-        flex-flow: column wrap
+        flex-wrap: wrap
         align-items: center
         align-content: stretch
         max-height: 8em
