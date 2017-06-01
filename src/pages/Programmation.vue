@@ -1,12 +1,15 @@
 <template>
   <detail-layout>
-    <h1>Vendredi 21 juillet 20h-3h</h1>
+    <h1>Vendredi 21 juillet
+      <nobr>20h-3h</nobr></h1>
     <div class="card-container"><artist-card :name="artist" v-for="artist in artists.friday"></artist-card></div>
-    <h1>Samedi 22 juillet 12h-19h</h1>
+    <h1>Samedi 22 juillet
+      <nobr>12h-19h</nobr></h1>
     <div class="card-container"><artist-card :name="artist" v-for="artist in artists.saturdayAM"></artist-card></div>
-    <h1>Samedi 22 juillet 20h-5h</h1>
+    <h1>Samedi 22 juillet
+      <nobr>20h-5h</nobr></h1>
     <div class="card-container"><artist-card :name="artist" v-for="artist in artists.saturdayPM"></artist-card></div>
-    <p>Vous pouvez aussi télécharger le détail de la programmation
+    <p class="tac">Vous pouvez aussi télécharger le détail de la programmation
       <a :href="progFile" download="Programmation.jpg">ici</a>&nbsp;!</p>
     <h1>Aperçu de l'édition 2016</h1>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/IJFo8U2U7SQ" frameborder="0" allowfullscreen></iframe>
@@ -60,9 +63,13 @@
 </script>
 
 <style lang="sass" scoped>
-  h1
+  h1, h1 > nobr
     font-family: title, serif
-    font-size: 3em
+    font-size: xx-large
+    text-align: center
+
+  h1:not(:first-of-type)
+    padding-top: 80px
 
   .card-container
     padding-top: 20px
@@ -70,6 +77,12 @@
     justify-content: space-around
     flex-wrap: wrap
 
-  p
+  .tac
     padding-top: 40px
+    text-align: center
+
+  iframe
+    display: block
+    margin: auto
+    width: 560px
 </style>
