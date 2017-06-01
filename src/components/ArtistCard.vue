@@ -70,7 +70,7 @@
       padding: 4px
       mix-blend-mode: hard-light
       >p
-        font-family: title, serif
+        font-family: main, serif
         font-size: 1.2em
         width: $card-size*0.58
         color: black
