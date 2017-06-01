@@ -53,7 +53,7 @@
   import VLink from '../components/VLink.vue'
   import MUSIC_FILE from '../lo_gully-sound-system.mp3'
 
-  const IMAGE_COUNT = 10;
+  const IMAGE_COUNT = 20;
 
   export default {
     data() {
@@ -62,7 +62,7 @@
         firstClick: false,
         neverClicked: true,
         isPlaying: false,
-        background: +sessionStorage.getItem('GULLY_background') || IMAGE_COUNT - 1
+        background: +sessionStorage.getItem('GULLY_background') || 9
       }
     },
 
@@ -101,7 +101,7 @@
 
 <style lang="sass">
   $primary-color: snow
-  $image-count: 10
+  $image-count: 20
 
   .fa.fa-4
     font-size: xx-large
@@ -143,7 +143,7 @@
     transition: background-image .4s ease-in-out
     @for $i from 0 through $image-count - 1
       &.background-#{$i}
-        background-image: url('../img/#{$i}.jpg')
+        background-image: url('../img/background/#{$i}.jpg')
 
   /*                                                                                           FONTS AND GENERIC TAGS */
   @font-face
