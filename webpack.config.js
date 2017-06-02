@@ -8,42 +8,58 @@ module.exports = {
     publicPath: '/dist/',
     filename: 'build.js'
   },
-  resolveLoader: {
-    root: path.join(__dirname, 'node_modules'),
-  },
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.vue$/,
-        loader: 'vue'
+        loader: 'vue-loader',
+        options: {
+          loaders: {
+            sass: ['vue-style-loader', 'css-loader?sourceMap', 'sass-loader?indentedSyntax&sourceMap']
+          }
+        }
       },
       {
         test: /\.js$/,
-        loader: 'babel',
+        use: {
+          loader: 'babel-loader',
+          options: {
+            "presets": [
+              ["es2015", {"modules": false}]
+            ]
+          },
+        },
         exclude: /node_modules/
       },
       {
         test: /\.(png|jpe?g|gif|svg|[ot]tf|mp3|pdf)$/i,
-        loader: 'file',
-        query: {
-          name: '[name].[ext]?[hash]'
-        }
+        use: {
+          loader: 'file-loader',
+          query: {
+            name: '[name].[ext]?[hash]'
+          }
+        },
+
       },
       {
         test: /\.ya?ml$/,
-        loader: 'json!yaml'
+        use: ['json-loader', 'yaml-loader']
       },
       {
         test: /\.sass$/,
-        loader: 'css?sourceMap!sass?indentedSyntax&sourceMap'
+        use: ['css-loader?sourceMap', 'sass-loader?indentedSyntax&sourceMap']
       }
     ]
   },
-  vue: {
-    loaders: {
-      sass: 'vue-style!css?sourceMap!sass?indentedSyntax&sourceMap'
-    }
-  },
+  plugins: [
+    // new webpack.LoaderOptionsPlugin({
+    //   vue: {
+    //     loaders: {
+    //       sass: ['vue-style-loader', 'css-loader?sourceMap', 'sass-loader?indentedSyntax&sourceMap']
+    //     }
+    //   }
+    // })
+  ],
   devServer: {
     historyApiFallback: true,
     noInfo: true
@@ -60,11 +76,6 @@ if (process.env.NODE_ENV === 'production') {
         NODE_ENV: '"production"'
       }
     }),
-    new webpack.optimize.UglifyJsPlugin({
-      compress: {
-        warnings: false
-      }
-    }),
-    new webpack.optimize.OccurenceOrderPlugin()
+    new webpack.optimize.UglifyJsPlugin(), // FIXME: no source map (add option if need be, { sourceLoaders: true })
   ])
 }

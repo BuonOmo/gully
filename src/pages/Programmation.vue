@@ -4,21 +4,21 @@
       <nobr>20h-3h</nobr>
     </h1>
     <div class="card-container">
-      <artist-card :picture="artist.ref" :title="artist.title" v-for="artist in artists.friday">
+      <artist-card :picture="artist.ref" :title="artist.title" v-for="artist in artists.friday" :key="artist.ref">
       </artist-card>
     </div>
     <h1>Samedi 22 juillet
       <nobr>12h-19h</nobr>
     </h1>
     <div class="card-container">
-      <artist-card :picture="artist.ref" :title="artist.title" v-for="artist in artists.saturdayAM">
+      <artist-card :picture="artist.ref" :title="artist.title" v-for="artist in artists.saturdayAM" :key="artist.ref">
       </artist-card>
     </div>
     <h1>Samedi 22 juillet
       <nobr>20h-5h</nobr>
     </h1>
     <div class="card-container">
-      <artist-card :picture="artist.ref" :title="artist.title" v-for="artist in artists.saturdayPM">
+      <artist-card :picture="artist.ref" :title="artist.title" v-for="artist in artists.saturdayPM" :key="artist.ref">
       </artist-card>
     </div>
     <p class="tac">Vous pouvez aussi télécharger le détail de la programmation
