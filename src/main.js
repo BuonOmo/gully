@@ -33,7 +33,7 @@ window.app = app;
 
 /* Preload images */
 for (let i = 0; i < 10; i++) {
-  let url = require(`./img/${i}.jpg`);
+  let url = require(`./img/background/${i}.jpg`);
   let img = new Image();
   img.src = url;
 }

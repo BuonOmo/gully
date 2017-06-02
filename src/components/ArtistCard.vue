@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper" :class="image"><span class="close"></span>
+  <div class="wrapper" :class="picture"><span class="close"></span>
     <div></div><span class="text">
     <p>{{ title }}</p></span>
   </div>
@@ -8,21 +8,13 @@
 <script>
   export default {
     props: {
-      name: {
+      picture: {
         type: String,
         required: true
-      }
-    },
-
-    data() {
-      return {
-        image: this.name
-      }
-    },
-
-    computed: {
-      title() {
-        return this.name.toUpperCase().replace(/_/g, ' ');
+      },
+      title: {
+        type: String,
+        required: true
       }
     }
   }
@@ -43,6 +35,9 @@
 
   .wrapper.earlydays_sound_ft_ghosthrider .text
     bottom: 180px
+
+  .wrapper.dancehall .text
+    bottom: 40px
 
   .wrapper
     margin: 10px

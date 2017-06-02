@@ -30,6 +30,10 @@ module.exports = {
         }
       },
       {
+        test: /\.ya?ml$/,
+        loader: 'json!yaml'
+      },
+      {
         test: /\.sass$/,
         loader: 'css?sourceMap!sass?indentedSyntax&sourceMap'
       }
