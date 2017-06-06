@@ -33,7 +33,7 @@ module.exports = {
       },
       {
         test: /\.(png|jpe?g)$/i,
-        use: 'url-loader?limit=1000000'
+        use: 'url-loader?limit=300000'
       },
       {
         test: /\.(gif|svg|[ot]tf|mp3|pdf)$/i,
