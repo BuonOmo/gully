@@ -32,7 +32,11 @@ module.exports = {
         exclude: /node_modules/
       },
       {
-        test: /\.(png|jpe?g|gif|svg|[ot]tf|mp3|pdf)$/i,
+        test: /\.(png|jpe?g)$/i,
+        use: 'url-loader?limit=2000'
+      },
+      {
+        test: /\.(gif|svg|[ot]tf|mp3|pdf)$/i,
         use: {
           loader: 'file-loader',
           query: {
@@ -51,15 +55,6 @@ module.exports = {
       }
     ]
   },
-  plugins: [
-    // new webpack.LoaderOptionsPlugin({
-    //   vue: {
-    //     loaders: {
-    //       sass: ['vue-style-loader', 'css-loader?sourceMap', 'sass-loader?indentedSyntax&sourceMap']
-    //     }
-    //   }
-    // })
-  ],
   devServer: {
     historyApiFallback: true,
     noInfo: true
