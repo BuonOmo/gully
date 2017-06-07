@@ -175,21 +175,25 @@
     > ul
       margin: 5px
       display: flex
-      flex-direction: row
+      flex-flow: row wrap
+      align-items: center
       justify-content: space-around
       list-style-type: none
+      padding: 0
       > li
         font-variant: small-caps
         font-size: x-large
-        font-weight: bolder
-      @media screen and (orientation: portrait)
-        flex-wrap: wrap
-        align-items: center
-        align-content: stretch
-        max-height: 8em
+        font-weight: bold
+        padding: 0 10px
+        text-align: center
+      @media screen and (max-width: 200*3px)
+        $space-between-flex-box: 3px
+        margin-top: -$space-between-flex-box
         > li
-          text-align: center
-          font-size: 3em
+          min-width: 180px
+          padding-top: $space-between-flex-box
+          &:nth-child(3)
+            order: 4
 
   aside
     position: absolute
