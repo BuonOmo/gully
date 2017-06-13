@@ -29,7 +29,7 @@
       </nav>
       <aside>
         <ul>
-          <li class="music-button"><a v-on:click="play()">
+          <li class="music-button"><a v-on:click="play()" class="click">
             <i class="fa fa-4" :class="isPlaying?'fa-pause':'fa-play'" aria-hidden="true"></i>
           </a></li>
           <li><a href="https://www.facebook.com/artfactassociation/" target="_blank">
@@ -41,7 +41,8 @@
         </ul>
         <p class="download-music">
           <a :href="music.src" download="Gully Sound System — Lo (Bhale Bacce Crew).mp3">
-            {{isPlaying ? 'Téléchargement libre' : 'Gully Sound System — Lo (Bhale Bacce Crew)'}}
+            <span v-if="isPlaying">Téléchargement libre</span>
+            <span v-else>Gully Sound System — Lo (Bhale Bacce Crew)</span>
           </a>
         </p>
       </aside>
@@ -109,6 +110,9 @@
   body
     margin: 0
 
+  .click
+    cursor: pointer
+
   .image-container
     width: 30px
     height: 30px
@@ -126,6 +130,7 @@
     cursor: pointer
     position: absolute
     top: 50%
+    z-index: 1000
     // not mandatory in each direction
     margin: 8px
     &:hover
@@ -182,7 +187,7 @@
       padding: 0
       > li
         font-variant: small-caps
-        font-size: x-large
+        font-size: xx-large
         font-weight: bold
         padding: 0 10px
         text-align: center

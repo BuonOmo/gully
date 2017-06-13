@@ -1,7 +1,7 @@
 <template>
   <main-layout class="no-top-logo">
     <countdown date="Fri July 21 20:00:00 2017 UTC+2"></countdown>
-    <img src="../img/logo.png" class="center-logo">
+    <div class="center-logo-ctn"><img src="../img/logo.png" class="center-logo"></div>
   </main-layout>
 </template>
 
@@ -18,13 +18,18 @@
 </script>
 
 <style lang="sass">
+  .center-logo-ctn
+    position: absolute
+    top: 0
+    width: 100%
+    height: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+
   .center-logo
-    display: block
-    margin: 3% auto auto
-    height: 70%
-    @media screen and (orientation: portrait)
-      display: block
-      margin: 8% auto auto
-      height: auto
-      width: 80%
+    width: auto
+    height: auto
+    max-width: 80%
+    max-height: 70%
 </style>
