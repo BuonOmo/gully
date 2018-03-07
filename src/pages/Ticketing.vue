@@ -1,6 +1,6 @@
 <template>
   <detail-layout>
-    <iframe id="haWidget" src="https://www.helloasso.com/associations/artfact/evenements/festival-gully-sound-5/widget">
+    <iframe id="haWidget" src="https://www.helloasso.com/associations/artfact/evenements/festival-gully-sound-6-1/widget">
     </iframe>
     <p class="cgv">Vous pouvez retrouver nos conditions générales de ventes
       <a :href="cgvFile" download="Conditions-générales-de-vente Gully 5.pdf">ici</a>.</p>
