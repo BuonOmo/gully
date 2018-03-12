@@ -2,6 +2,8 @@ import Vue from 'vue'
 import routes from './routes'
 import ScrollPolyfill from 'smoothscroll-polyfill'
 
+export const IMAGE_COUNT = 27
+
 ScrollPolyfill.polyfill();
 
 Vue.filter('two_digits', function (value) {
@@ -32,8 +34,8 @@ window.addEventListener('popstate', () => {
 window.app = app;
 
 /* Preload images */
-for (let i = 0; i < 10; i++) {
-  let url = require(`./img/background/${i}.jpg`);
+for (let i = 0; i < IMAGE_COUNT; i++) {
+  let url = require(`./img/background/2018/${i}.jpg`);
   let img = new Image();
   img.src = url;
 }
