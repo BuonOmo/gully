@@ -13,7 +13,7 @@
   export default {
     mounted() {
       navbar.scrollIntoView({ behavior: 'smooth', block: 'end' })
-      setTimeout(() => navbar.scrollIntoView({ behavior: 'smooth' }), 500);
+      setTimeout(() => navbar.scrollIntoView({ behavior: 'smooth', block: 'start' }), 500);
     },
     components: {
       HomePage
