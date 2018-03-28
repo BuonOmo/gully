@@ -1,0 +1,26 @@
+---
+-
+  text: Première édition
+  date: 2013
+  count: 20
+  edition: 1
+-
+  text: Deuxième édition
+  date: 2014
+  count: 3
+  edition: 2
+-
+  text: Troisième édition
+  date: 2015
+  count: 25
+  edition: 3
+-
+  text: Quatrième édition
+  date: 2016
+  count: 55
+  edition: 4
+-
+  text: Cinquième édition
+  date: 2017
+  count: 100
+  edition: 5
