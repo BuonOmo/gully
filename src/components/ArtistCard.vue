@@ -38,36 +38,34 @@
     },
 
     methods: {
-      showModal() { this.isModal = true },
+      showModal() {
+      	// TODO: show modal again
+        // For now it does nothing. Just for the programation to be shown. Original code is commented below:
+      	//     this.isModal = true
+      },
       hideModal() { this.isModal = false }
     }
   }
 </script>
 
 <style lang="sass" scoped>
-  $images: soom_t_ft_zion_high_foundation missah_et_weedo red_rockers_digital_band blaze_up_sound brainless_sound
-  $images: join($images, earlydays_sound_ft_ghosthrider emka_loman ragga_youths_posse rakoon atomic_spliff)
-  $images: join($images, conquering_sound_ft_sir_jean skankin_sound_ft_mc_akro_ft_mista_t dreadsquad_ft_kasia_malenda)
-  $images: join($images, dancehall graf jeux_libres sound_systems_locaux foot irie_ites slackline)
+  $images: ackee_satlfish bhale_bacce_crew blaze_up_feat_ras_demo dancehall dub_addict_feat_joe_pilgrim dubamix foot
+  $images: join($images, graffititi iternal_sound_feat_ranking_diximal king_hifi_feat_lasai proleter rasputain)
+  $images: join($images, red_rockers_meets_king_everald riddim_tuffa_feat_charlie_p ruff_n_tuff sumac_dub)
+  $images: join($images, skankin_sound_feat_mc_akro slackline sonorisation sound_systems_locaux steep_bank_project)
 
-  $card-size: 280px
+  $card-width: 900px
 
   @each $image in $images
     .#{$image}
       background-image: url('../img/artists/#{$image}.jpg')
       background-size: contain
 
-  .wrapper.earlydays_sound_ft_ghosthrider .text
-    bottom: 180px
-
-  .wrapper.dancehall .text
-    bottom: 40px
-
   .wrapper
     margin: 10px
     position: relative
-    width: $card-size
-    height: $card-size
+    width: $card-width
+    height: $card-width / 4
 
     div
       width: 100%
@@ -77,13 +75,13 @@
       border: 4px groove
 
     &:hover .text
-      transform: translate($card-size*0.18) scale(1.6)
+      transform: translate($card-width*0.20) scale(1.65)
 
     .text
       transition: transform 0.3s ease
       text-align: center
       position: absolute
-      bottom: 28px
+      bottom: 20px
       left: 4px
       background-color: #eee
       padding: 4px
@@ -91,7 +89,7 @@
       >p
         font-family: main, serif
         font-size: 1.2em
-        width: $card-size*0.58
+        width: $card-width*0.58
         color: black
         margin: 0
 </style>

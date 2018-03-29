@@ -1,32 +1,28 @@
 <template>
   <detail-layout>
-    <p class="tac">
-      Programmation à venir...
-    </p>
-    <!-- 2017 programmation files -->
-    <!--<h1>Vendredi 21 juillet-->
-      <!--<nobr>20h-3h</nobr>-->
-    <!--</h1>-->
-    <!--<div class="card-container">-->
-      <!--<artist-card :artist="artist" v-for="artist in artists.friday" :key="artist.ref">-->
-      <!--</artist-card>-->
-    <!--</div>-->
-    <!--<h1>Samedi 22 juillet-->
-      <!--<nobr>12h-19h</nobr>-->
-    <!--</h1>-->
-    <!--<div class="card-container">-->
-      <!--<artist-card :artist="artist" v-for="artist in artists.saturdayAM" :key="artist.ref">-->
-      <!--</artist-card>-->
-    <!--</div>-->
-    <!--<h1>Samedi 22 juillet-->
-      <!--<nobr>20h-5h</nobr>-->
-    <!--</h1>-->
-    <!--<div class="card-container">-->
-      <!--<artist-card :artist="artist" v-for="artist in artists.saturdayPM" :key="artist.ref">-->
-      <!--</artist-card>-->
-    <!--</div>-->
-    <!--<p class="tac">Vous pouvez aussi télécharger le détail de la programmation-->
-      <!--<a :href="progFile" download="Programmation.jpg">ici</a>&nbsp;!</p>-->
+    <h1>Vendredi 20 juillet
+      <nobr>20h-3h30</nobr>
+    </h1>
+    <div class="card-container">
+      <artist-card :artist="artist" v-for="artist in artists.friday" :key="artist.ref">
+      </artist-card>
+    </div>
+    <h1>Samedi 21 juillet
+      <nobr>14h-20h</nobr>
+    </h1>
+    <div class="card-container">
+      <artist-card :artist="artist" v-for="artist in artists.saturdayAM" :key="artist.ref">
+      </artist-card>
+    </div>
+    <h1>Samedi 21 juillet
+      <nobr>20h30-5h</nobr>
+    </h1>
+    <div class="card-container">
+      <artist-card :artist="artist" v-for="artist in artists.saturdayPM" :key="artist.ref">
+      </artist-card>
+    </div>
+    <p class="tac">Vous pouvez aussi télécharger le détail de la programmation
+      <a :href="progFile" download="Programmation.jpg">ici</a>&nbsp;!</p>
     <h1>Aperçu de l'édition 2017</h1>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/A2awFT8ErS8" frameborder="0"
             allowfullscreen></iframe>
@@ -37,7 +33,7 @@
   import DetailLayout from '../layouts/Detail.vue'
   import ArtistCard from '../components/ArtistCard.vue'
   import PROG_FILE from '../img/programmation.jpg'
-  import ARTISTS from '../resources/artists.yml'
+  import ARTISTS from '../img/artists/index.yml'
 
   export default {
     data() {
