@@ -4,7 +4,7 @@
     v-bind:class="{ active: isActive }"
     v-on:click="go"
   >
-    <slot></slot>
+    <slot/>
   </a>
 </template>
 

@@ -1,6 +1,6 @@
 <template>
   <main-layout class="no-top-logo">
-    <countdown date="Fri July 20 20:00:00 2018 UTC+2"></countdown>
+    <countdown date="Fri July 20 20:00:00 2018 UTC+2"/>
     <div class="center-logo-ctn"><img src="../img/logo.png" class="center-logo"></div>
   </main-layout>
 </template>

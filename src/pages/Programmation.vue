@@ -3,24 +3,15 @@
     <h1>Vendredi 20 juillet
       <nobr>20h-3h30</nobr>
     </h1>
-    <div class="card-container">
-      <artist-card :artist="artist" v-for="artist in artists.friday" :key="artist.ref">
-      </artist-card>
-    </div>
+    <artist-card :artist="artist" v-for="artist in artists.friday" :key="artist.ref"/>
     <h1>Samedi 21 juillet
       <nobr>14h-20h</nobr>
     </h1>
-    <div class="card-container">
-      <artist-card :artist="artist" v-for="artist in artists.saturdayAM" :key="artist.ref">
-      </artist-card>
-    </div>
+    <artist-card :artist="artist" v-for="artist in artists.saturdayAM" :key="artist.ref"/>
     <h1>Samedi 21 juillet
       <nobr>20h30-5h</nobr>
     </h1>
-    <div class="card-container">
-      <artist-card :artist="artist" v-for="artist in artists.saturdayPM" :key="artist.ref">
-      </artist-card>
-    </div>
+    <artist-card :artist="artist" v-for="artist in artists.saturdayPM" :key="artist.ref"/>
     <p class="tac">Vous pouvez aussi télécharger le détail de la programmation
       <a :href="progFile" download="Programmation.jpg">ici</a>&nbsp;!</p>
     <h1>Aperçu de l'édition 2017</h1>
@@ -58,12 +49,6 @@
 
   h1:not(:first-of-type)
     padding-top: 80px
-
-  .card-container
-    padding-top: 20px
-    display: flex
-    justify-content: space-around
-    flex-wrap: wrap
 
   .tac
     padding-top: 40px

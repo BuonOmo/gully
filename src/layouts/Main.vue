@@ -4,7 +4,7 @@
     <div class="background" :class="'background-' + background">
       <a class="arrow left" @click="previousImage()"><i class="fa fa-4 fa-chevron-left"></i></a>
       <a class="arrow right" @click="nextImage()"><i class="fa fa-4 fa-chevron-right"></i></a>
-      <slot></slot>
+      <slot/>
       <nav id="navbar">
         <ul>
           <li>

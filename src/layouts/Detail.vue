@@ -1,8 +1,8 @@
 <template>
   <div>
-    <home-page></home-page>
+    <home-page/>
     <main>
-      <slot></slot>
+      <slot/>
     </main>
   </div>
 </template>
