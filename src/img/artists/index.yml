@@ -160,3 +160,6 @@ saturdayPM:
     musics:
       - https://soundcloud.com/ruffntuffsound
     description: "All styles of reggae"
+sonorisation:
+  ref: sonorisation
+  title: "Red Rockers sound system"

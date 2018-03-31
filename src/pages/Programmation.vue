@@ -12,6 +12,8 @@
       <nobr>20h30-5h</nobr>
     </h1>
     <artist-card :artist="artist" v-for="artist in artists.saturdayPM" :key="artist.ref"/>
+    <h1>Sonorisation</h1>
+    <artist-card :artist="artists.sonorisation"/>
     <p class="tac">Vous pouvez aussi télécharger le détail de la programmation
       <a :href="progFile" download="Programmation.jpg">ici</a>&nbsp;!</p>
     <h1>Aperçu de l'édition 2017</h1>
