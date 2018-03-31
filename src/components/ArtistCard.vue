@@ -1,18 +1,10 @@
 <template>
   <div>
-    <div class="wrapper" :class="artist.ref" @click="showModal()"><span class="close"></span>
-      <div></div><span class="text"><p>{{ artist.title }}</p></span>
+    <div class="wrapper" :class="artist.ref">
+      <div><!-- this is for CSS border purpose --></div>
+      <span class="text title">{{ artist.title }}</span>
+      <span class="text description" v-if="artist.description">{{ artist.description }}</span>
     </div>
-    <modal-component v-if="isModal" @close="hideModal()">
-      <h1 slot="header">
-        {{ artist.title }}
-        <span>
-          <a :href="artist.site" target="_blank"><i class="fa fa-facebook"></i></a>
-          <a :href="artist.music" target="_blank"><i class="fa fa-play"></i></a>
-        </span>
-      </h1>
-      <div slot="body" v-text="artist.description"></div>
-    </modal-component>
   </div>
 </template>
 
@@ -35,15 +27,6 @@
       return {
         isModal: false
       }
-    },
-
-    methods: {
-      showModal() {
-      	// TODO: show modal again
-        // For now it does nothing. Just for the programation to be shown. Original code is commented below:
-      	//     this.isModal = true
-      },
-      hideModal() { this.isModal = false }
     }
   }
 </script>
@@ -74,23 +57,30 @@
       mix-blend-mode: screen
       border: 4px groove
 
-    &:hover .text
-      transform: translate($card-width*0.20) scale(1.65)
+    &:hover
+      .title
+        transform: translate($card-width*0.30) scale(1.65)
+      .description
+        transform: translate(- $card-width*0.30) scale(1.65)
 
     .text
       transition: transform 0.3s ease
       text-align: center
       position: absolute
-      bottom: 20px
-      left: 4px
-      background-color: #eee
       background-color: #ffdc46
       padding: 4px
       mix-blend-mode: hard-light
+      &.title
+        top: 20px
+        left: 4px
+      &.description
+        bottom: 20px
+        right: 4px
       >p
         font-family: main, serif
         font-size: 1.2em
         width: $card-width*0.58
         color: #484848
         margin: 0
+
 </style>
