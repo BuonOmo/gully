@@ -84,12 +84,13 @@
       bottom: 20px
       left: 4px
       background-color: #eee
+      background-color: #ffdc46
       padding: 4px
       mix-blend-mode: hard-light
       >p
         font-family: main, serif
         font-size: 1.2em
         width: $card-width*0.58
-        color: black
+        color: #484848
         margin: 0
 </style>

@@ -44,13 +44,19 @@
 </script>
 
 <style lang="sass" scoped>
+  h1
+    background-color: #ffdc46
+    width: 500%
+    margin-left: -200%
+    margin-bottom: 40px
+    padding: 4px 0
   h1, h1 > nobr
     font-family: title, serif
     font-size: xx-large
     text-align: center
 
   h1:not(:first-of-type)
-    padding-top: 80px
+    margin-top: 40px
 
   .tac
     padding-top: 40px

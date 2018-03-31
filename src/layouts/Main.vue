@@ -27,7 +27,7 @@
       <aside>
         <ul>
           <li class="music-button"><a v-on:click="play()" class="click">
-            <i class="fa fa-4" :class="isPlaying?'fa-pause':'fa-play'" aria-hidden="true"></i>
+            <i class="fa fa-4 second-color" :class="isPlaying?'fa-pause':'fa-play'" aria-hidden="true"></i>
           </a></li>
           <li><a href="https://www.facebook.com/artfactassociation/" target="_blank">
             <i class="fa fa-4 fa-facebook-official" aria-hidden="true"></i>
@@ -98,6 +98,7 @@
 
 <style lang="sass">
   $primary-color: snow
+  $second-color: #ffdc46
   $image-count: 27
 
   .fa.fa-4
@@ -159,6 +160,8 @@
     font-family: main, serif
 
   .background
+    .second-color
+      color: $second-color
     *
       color: $primary-color
     nav *

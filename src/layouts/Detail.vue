@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="full-width-container">
     <home-page/>
     <main>
       <slot/>
@@ -22,6 +22,11 @@
 </script>
 
 <style lang="sass" scoped>
+  // A great trick for expanding beyond a parent div:
+  //  http://www.modusagency.com/css-trick-expanding-a-div-beyond-a-parent-container/
+  .full-width-container
+    overflow-x: hidden
+
   main
     min-height: 100vh
     padding: 30px 20px 20px
