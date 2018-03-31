@@ -1,7 +1,19 @@
 <template>
   <detail-layout>
+    <h1>Le mot de l&rsquo;&eacute;quipe</h1>
+    <p>
+      Chaque &eacute;dition nous rapproche un peu plus de notre r&ecirc;ve de gosse : organiser un petit festival
+      chaleureux entre amis. Depuis la cr&eacute;ation, nous souhaitons proposer une exp&eacute;rience festive entre
+      champs et for&ecirc;ts, r&eacute;unissant amateurs et n&eacute;ophytes autour de bonnes vibes reggae. Nous nous
+      effor&ccedil;ons d’&ecirc;tre &agrave; la hauteur de nos valeurs : convivialit&eacute;, bienveillance,
+      humilit&eacute;, respect des personnes et de la nature. Toute l’ann&eacute;e, la dtermination et l’engagement
+      b&eacute;n&eacute;vole nous guident avec pour objectif : amliorer continuellement la qualit&eacute; du festival.
+      Nous tentons en fonction de nos moyens, de r&eacute;pondre &agrave; vos envies tout en vous proposant de la
+      d&eacute;couverte. On esp&egrave;re que vous aurez &agrave; c&oelig;ur de vous approprier cette sixi&egrave;me
+      &eacute;dition !
+    </p>
     <h1>Acc&egrave;s au festival</h1>
-    <p>Nous vous invitons dans les belles montagnes du Bugey &agrave; Arandas (01230).&nbsp;</p>
+    <p>Nous vous invitons dans les belles montagnes du Bugey &agrave; Arandas (01230).</p>
     <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2777.78202590559!2d5.504616915590598!3d45.87567041391387!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDXCsDUyJzMyLjQiTiA1wrAzMCcyNC41IkU!5e0!3m2!1sfr!2sus!4v1494747091578"
         width="600" height="450" frameborder="0" allowfullscreen></iframe>
@@ -13,7 +25,7 @@
       en stop pour les plus courageux&nbsp;!</p>
     <p>
       On vous encourage fortement &agrave; faire du covoiturage et laisser une annonce sur
-      <a href="https://www.facebook.com/events/1191546974275938/">la page de l&rsquo;&eacute;v&egrave;nement Facebook</a>.
+      <a target="_blank" href="https://www.facebook.com/events/156883218350218/">la page de l&rsquo;&eacute;v&egrave;nement Facebook</a>.
     </p>
     <p>
       Pour ceux qui viendraient en v&eacute;lo, l&rsquo;organisation s&rsquo;engage &agrave; offrir deux boissons par
@@ -27,10 +39,10 @@
       voiture sur le parking mise &agrave; part pour les camions am&eacute;nag&eacute;s. Dans un esprit de bienveillance
       nous demandons aux festivaliers de ne pas installer des syst&egrave;mes sonores sur le parking ou le camping.&nbsp;
     </p>
-    <h1>Au Gully Sound, qu'est ce qu'on trouve au menu&nbsp;?</h1>
+    <h1>Au Gully Sound, qu&rsquo;est ce qu&rsquo;on trouve au menu&nbsp;?</h1>
     <p>
       Plusieurs stands de restaurations seront pr&eacute;sents pour le plus grand plaisir de vos papilles.
-      Sucr&eacute;, sal&eacute;, viandard, v&eacute;g&eacute;tarien, il y en aura pour tous les go&ucirc;ts à des prix abordables.
+      Sucr&eacute;, sal&eacute;, viandard, v&eacute;g&eacute;tarien, il y en aura pour tous les go&ucirc;ts &agrave; des prix abordables.
       Du cot&eacute; des boissons, on retrouvera notre traditionnelle bi&egrave;re artisanale &agrave; toujours 2&euro;
       le demi. Vins et jus de fruit seront &eacute;galement propos&eacute;s. Les paiements se font en Gully, la monnaie
       locale du festival. Nous acceptons pour les entr&eacute;es et les jetons la carte bancaire.&nbsp;
@@ -58,7 +70,7 @@
       <li>Tentes</li>
       <li>Pointeurs laser</li>
       <li>Les animaux</li>
-      <li>&Eacute;quipement d'enregistrement audio/vid&eacute;o professionnel</li>
+      <li>&Eacute;quipement d&rsquo;enregistrement audio/vid&eacute;o professionnel</li>
       <li>Armes &agrave; feux, couteaux, armes en tous genres</li>
       <li>Tout objet pouvant causer des blessures</li>
     </ul>
@@ -80,7 +92,7 @@
       b&eacute;n&eacute;voles du festival et de respecter les lieux qui nous sont g&eacute;n&eacute;reusement mis
       &agrave; disposition et enfin de respecter les installations et les &oelig;uvres d&rsquo;art.
     </p>
-    <h1>Qu'arrive-t-il s'il pleut?</h1>
+    <h1>Qu&rsquo;arrive-t-il s&rsquo;il pleut?</h1>
     <p>
       Beau temps, mauvais temps, le spectacle continu ! Des chapiteaux sont pr&eacute;vus pour couvrir la sc&egrave;ne
       et les festivaliers. Habillez-vous en cons&eacute;quence !
