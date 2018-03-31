@@ -19,9 +19,6 @@
           <!--<li>-->
           <!--<v-link href="/photos">Photos / Vidéos</v-link>-->
           <!--</li>-->
-          <!--<li>-->
-          <!--<v-link href="/artfact">Association Artfact</v-link>-->
-          <!--</li>-->
           <li>
             <v-link href="/contact">Contact</v-link>
           </li>
