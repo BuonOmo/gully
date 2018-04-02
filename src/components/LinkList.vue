@@ -41,9 +41,9 @@
     font-size: 1.7em
 
   a
-    color: cornflowerblue
+    color: #282861
     &:hover
-      color: darken(steelblue, 1)
+      color: lighten(#282861, 20%)
     &:visited
       color: maroon
 
