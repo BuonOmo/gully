@@ -2,7 +2,7 @@
   <ul>
     <li v-for="link in list">
       <a :href="link" target="_blank">
-        <i :class="'spec-font-size' + getFontAwesomeLogoFromLink(link)" ></i>
+        <i :class="`spec-font-size ${getFontAwesomeLogoFromLink(link)}`" ></i>
       </a>
     </li>
   </ul>
