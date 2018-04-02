@@ -2,8 +2,8 @@
   <div>
     <v-link href="/" class="image-container"><img class="top-logo" src="../img/logo.png" width="150px"></v-link>
     <div class="background" :class="'background-' + background">
-      <a class="arrow left" @click="previousImage()"><i class="fa fa-4 fa-chevron-left"></i></a>
-      <a class="arrow right" @click="nextImage()"><i class="fa fa-4 fa-chevron-right"></i></a>
+      <a class="arrow left" @click="previousImage()"><i class="fa fa-4x fa-chevron-left"></i></a>
+      <a class="arrow right" @click="nextImage()"><i class="fa fa-4x fa-chevron-right"></i></a>
       <slot/>
       <nav id="navbar">
         <ul>
@@ -27,13 +27,13 @@
       <aside>
         <ul>
           <li class="music-button"><a v-on:click="play()" class="click">
-            <i class="fa fa-4 second-color" :class="isPlaying?'fa-pause':'fa-play'" aria-hidden="true"></i>
+            <i class="fa fa-2x second-color" :class="isPlaying?'fa-pause':'fa-play'" aria-hidden="true"></i>
           </a></li>
           <li><a href="https://www.facebook.com/artfactassociation/" target="_blank">
-            <i class="fa fa-4 fa-facebook-official" aria-hidden="true"></i>
+            <i class="fab fa-2x fa-facebook" aria-hidden="true"></i>
           </a></li>
           <li><a href="https://www.youtube.com/channel/UC5CBBUAr0w1HHjV4HxYSmSA" target="_blank">
-            <i class="fa fa-4 fa-youtube"></i>
+            <i class="fab fa-2x fa-youtube"></i>
           </a></li>
         </ul>
         <p class="download-music">
