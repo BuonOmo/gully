@@ -2,7 +2,7 @@
   <ul>
     <li v-for="link in list">
       <a :href="link" target="_blank">
-        <i :class="'fab spec-font-size fa-' + extractSiteName(link)" ></i>
+        <i :class="'spec-font-size' + getFontAwesomeLogoFromLink(link)" ></i>
       </a>
     </li>
   </ul>
@@ -18,8 +18,11 @@
     },
 
     methods: {
-      extractSiteName(link) {
-        return link.match(/https?:\/\/(?:www.)?([^.]+)/)[1]
+      getFontAwesomeLogoFromLink(link) {
+        const basename = link.match(/https?:\/\/(?:www.)?([^.]+)/)[1]
+        return ['facebook', 'twitter', 'soundcloud', 'youtube'].includes(basename)
+          ? `fab fa-${basename}`
+          : 'fas fa-globe'
       }
     }
   }
