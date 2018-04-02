@@ -1,15 +1,21 @@
 <template>
-  <div>
+  <div class="card-container">
+    <aside>
+      <link-list :list="artist.links" />
+    </aside>
     <div class="wrapper" :class="artist.ref">
       <div><!-- this is for CSS border purpose --></div>
       <span class="text title">{{ artist.title }}</span>
       <span class="text description" v-if="artist.description">{{ artist.description }}</span>
     </div>
+    <aside :class="{empty: !artist.extra}">
+      <link-list :list="artist.extra" />
+    </aside>
   </div>
 </template>
 
 <script>
-  import ModalComponent from './Modal.vue'
+  import LinkList from './LinkList.vue'
 
   export default {
     props: {
@@ -20,7 +26,7 @@
     },
 
     components: {
-      ModalComponent
+      LinkList
     },
 
     data() {
@@ -37,7 +43,16 @@
   $images: join($images, red_rockers_meets_king_everald riddim_tuffa_feat_charlie_p ruff_n_tuff sumac_dub)
   $images: join($images, skankin_sound_feat_mc_akro slackline sonorisation sound_systems_locaux steep_bank_project)
 
-  $card-width: 900px
+  $card-width: 840px
+
+  aside
+    width: 30px
+    min-height: 28px
+
+  .card-container
+    display: flex
+    justify-content: space-around
+    align-items: center
 
   @each $image in $images
     .#{$image}
@@ -59,28 +74,38 @@
 
     &:hover
       .title
-        transform: translate($card-width*0.30) scale(1.65)
+        transform: translate($card-width*0.18) scale(1.6)
       .description
-        transform: translate(- $card-width*0.30) scale(1.65)
+        transform: translate(- $card-width*0.18) scale(1.6)
 
+  .text
+    transition: transform 0.3s ease
+    position: absolute
+    background-color: #ffdc46
+    padding: 4px
+    mix-blend-mode: hard-light
+    font-family: main, serif
+    font-size: 1.2em
+    &.title
+      top: 20px
+      left: 4px
+    &.description
+      bottom: 20px
+      right: 4px
+
+  @media only screen and (max-device-width: 480px)
     .text
-      transition: transform 0.3s ease
-      text-align: center
-      position: absolute
-      background-color: #ffdc46
-      padding: 4px
-      mix-blend-mode: hard-light
-      &.title
-        top: 20px
-        left: 4px
-      &.description
-        bottom: 20px
-        right: 4px
-      >p
-        font-family: main, serif
-        font-size: 1.2em
-        width: $card-width*0.58
-        color: #484848
-        margin: 0
+      font-size: 1.4em
 
+    .card-container
+      margin-bottom: 22px
+      flex-wrap: wrap
+      > .wrapper
+        order: 1
+      > aside
+        order: 2
+    aside
+      width: 100px
+    .empty
+      display: none
 </style>

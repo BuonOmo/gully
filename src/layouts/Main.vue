@@ -24,7 +24,7 @@
           </li>
         </ul>
       </nav>
-      <aside>
+      <aside class="top-links">
         <ul>
           <li class="music-button"><a v-on:click="play()" class="click">
             <i class="fa fa-2x second-color" :class="isPlaying?'fa-pause':'fa-play'" aria-hidden="true"></i>
@@ -199,7 +199,7 @@
           &:nth-child(3)
             order: 4
 
-  aside
+  .top-links
     position: absolute
     width: 98%
     top: 0

@@ -6,71 +6,68 @@ friday:
   -
     ref: proleter
     title: "Proleter"
-    sites:
+    links:
       - https://www.facebook.com/ProleteR.beats/
-    musics:
       - https://www.youtube.com/channel/UC08NVDi0tgVdM6YxHoBPTTw
     description: "Beatmaker – Mix swing jazz hip-hop and électro"
   -
     ref: dubamix
     title: "Dubamix"
-    sites:
+    links:
       - https://www.facebook.com/dubamixofficiel/
-    musics:
       - https://soundcloud.com/dubamix
     description: "Electro dub militant"
   -
     ref: king_hifi_feat_lasai
     title: " King Hifi feat Lasai(ESP)"
-    sites:
+    links:
       - https://www.facebook.com/king.hi.fi/
-      - https://www.facebook.com/Lasaimuzzik/
-    musics:
       - https://soundcloud.com/kinghifi
+    extra:
+      - https://www.facebook.com/Lasaimuzzik/
       - https://www.youtube.com/channel/UCxMPEjW8KGqP-KypBi_j1rQ
     description: "Rubadub – Steppa – Digital – Dancehall – Hip Hop"
   -
     ref: dub_addict_feat_joe_pilgrim
     title: "Dub Addict meets Joe Pilgrim"
-    sites:
+    links:
       - https://www.facebook.com/Dub-Addict-sound-system-253530334713570/?ref=br_rs
-      - https://www.facebook.com/Joepilgrimmusic/
-    musics:
       - https://soundcloud.com/dub-addict-sound-system
+    extra:
+      - https://www.facebook.com/Joepilgrimmusic/
       - https://www.youtube.com/channel/UCWWZkrG9SFbVXyKcBooINDw
     description: "Heavy dub music"
   -
     ref: steep_bank_project
     title: "Steep Bank Project"
-    sites:
+    links:
       - https://www.facebook.com/SteepBankProject/
-    musics:
       - https://www.youtube.com/channel/UCD-0DEfsfBWqmtFDe4t9DaQ
     description: "Live reggae dub"
   -
     ref: skankin_sound_feat_mc_akro
     title: "Skank’in Sound feat MC Akro"
-    sites:
+    links:
       - https://www.facebook.com/Skankin-sound-586034284751871/
-      - https://www.facebook.com/mc.akrow
-    musics:
       - https://soundcloud.com/florent-rea
+    extra:
+      - https://www.facebook.com/mc.akrow
       - https://soundcloud.com/mc-akro
     description: "Rubadub – Digital"
   -
     ref: iternal_sound_feat_ranking_diximal
     title: "Iternal Sound feat Ranking_Diximal"
-    sites:
+    links:
       - https://www.facebook.com/iternalsoundsystem/
-      - https://www.facebook.com/ranking.diximal
-    musics:
       - https://soundcloud.com/iternalsound
+    extra:
+      - https://www.facebook.com/ranking.diximal
       - https://soundcloud.com/original-ranking-diximal
     description: "Reggae – Raggamuffin"
   -
     ref: rasputain
     title: "Rasputain"
-    sites:
+    links:
       - https://www.facebook.com/vincent.rasputain
     description: "Roots reggae"
 
@@ -81,9 +78,8 @@ saturdayAM:
   -
     ref: dancehall
     title: "Mouv'Ment Dancer'z"
-    sites:
+    links:
       - https://soundcloud.com/original-ranking-diximal
-    musics:
       - https://www.youtube.com/channel/UC7jHU8mJQjXPnQeJwU9Ihzg
     description: "Dancehall : Lesson and Show"
   -
@@ -100,64 +96,59 @@ saturdayPM:
   -
     ref: riddim_tuffa_feat_charlie_p
     title: "Riddim Tuffa(SCO) feat Charlie P(ANG)"
-    sites:
+    links:
       - https://www.facebook.com/Riddim-Tuffa-Sound-Production-133075433415355/
-      - https://www.facebook.com/charliepreggae/
-    musics:
       - https://www.youtube.com/user/riddimtuffa
+    extra:
+      - https://www.facebook.com/charliepreggae/
       - https://www.youtube.com/channel/UCWRa1u0rKFg2WzIiSWV5yJQ
     description: "Reggae – Dub – Dancehall"
-    
   -
     ref: blaze_up_feat_ras_demo
     title: "Blaze up feat Ras Demo(ANG) Aka Demolition Man"
-    sites:
+    links:
       - https://www.facebook.com/Blaze-Up-Sound-184063975471691/
-      - https://www.facebook.com/Rasdemolitionman/?ref=br_rs
-    musics:
       - https://www.youtube.com/user/BLAZEUPSELECTA
+    extra:
+      - https://www.facebook.com/Rasdemolitionman/
       - https://www.youtube.com/channel/UCZ0GdbPPLJhuegQjnZSqpVA
     description: "Reggae dancehall – Jungle"
   -
     ref: bhale_bacce_crew
     title: "Bhale Bacce Crew"
-    sites:
+    links:
       - https://www.facebook.com/bhalebaccesound/
-    musics:
       - https://www.youtube.com/channel/UCE_kEMGq8OKi3mvINgm0cKg
     description: "Hip Hop – Sound system culture"
   -
     ref: sumac_dub
     title: "Sumac Dub"
-    sites:
+    links:
       - https://www.facebook.com/sumacdub/
-    musics:
       - https://www.youtube.com/channel/UCN3S4kr19-b32B-JkdWFGiw
     description: "Harmonic and electronic dub"
   -
     ref: red_rockers_meets_king_everald
     title: "Red Rockers meets King Everald(JAM) and Friends"
-    sites:
+    links:
       - https://www.facebook.com/redrockers69/
-      - https://www.facebook.com/king.everald
-    musics:
       - https://soundcloud.com/red-rockers
+    extra:
+      - https://www.facebook.com/king.everald
       - https://www.youtube.com/channel/UCrTAss7B088eBiKbI7sQHDQ
     description: "Reggae – Live band"
   -
     ref: ackee_satlfish
     title: "Ackee Saltfish"
-    sites:
+    links:
       - https://www.facebook.com/theackeesaltfish/
-    musics:
       - https://soundcloud.com/user-664364986
     description: "Tropical bass"
   -
     ref: ruff_n_tuff
     title: "Ruff N Tuff"
-    sites:
-      - https://www.facebook.com/RuffNTuffSound/?ref=br_rs
-    musics:
+    links:
+      - https://www.facebook.com/RuffNTuffSound/
       - https://soundcloud.com/ruffntuffsound
     description: "All styles of reggae"
 sonorisation:
