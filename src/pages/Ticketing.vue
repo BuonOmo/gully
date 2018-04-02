@@ -30,7 +30,8 @@
     margin: 74px auto auto
     width: 100%
     border: none
-    height: 1200px
+    // Height cannot be adjusted automatically. We have to check manually content height to set this value.
+    height: 950px
 
   .cgv
     text-align: center

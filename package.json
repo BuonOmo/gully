@@ -8,6 +8,7 @@
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
     "predeploy": "npm run build",
     "deploy": "surge --project . --domain gullysound.fr",
+    "expose": "ngrok http 8080 -host-header='localhost:8080'",
     "surge": "surge",
     "clean": "rm -rf dist node_modules",
     "test": "echo No tests yet && exit 0"

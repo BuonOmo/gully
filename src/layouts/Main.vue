@@ -54,10 +54,13 @@
 
   export default {
     data() {
+      const music = new Audio(MUSIC_FILE)
+      music.addEventListener("ended", () => {
+      	this.isPlaying = false
+      })
+
       return {
-        music: new Audio(MUSIC_FILE),
-        firstClick: false,
-        neverClicked: true,
+        music,
         isPlaying: false,
         background: +sessionStorage.getItem('GULLY_background') || IMAGE_COUNT - 1
       }
@@ -71,8 +74,6 @@
 
     methods: {
       play() {
-        this.firstClick = this.neverClicked;
-        this.neverClicked = false;
         if (this.music.paused) {
           this.music.play();
         } else {

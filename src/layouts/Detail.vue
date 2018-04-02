@@ -26,9 +26,10 @@
   //  http://www.modusagency.com/css-trick-expanding-a-div-beyond-a-parent-container/
   .full-width-container
     overflow-x: hidden
+    // 48px is roughly the navbar height, this min-height allows a clean scrolling.
+    min-height: calc(200vh - 48px)
 
   main
-    min-height: 100vh
     padding: 30px 20px 20px
     margin: auto
     width: 900px

@@ -3,7 +3,7 @@ node_js: 7
 script:
   - export DOMAIN_URL=$( [[ $TRAVIS_BRANCH = master ]] && echo gullysound.fr || echo gully.surge.sh )
   - echo The site will be deployed under $DOMAIN_URL
-  - yarn run build
+  - npm run build
 deploy:
   provider: surge
   project: .
