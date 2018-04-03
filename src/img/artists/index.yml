@@ -1,6 +1,9 @@
 # This file aims to get all informations mandatory about artists
 # - ref stands for the image filename in img/artists.
 # - title is the title which is shown on the card.
+# - description is also shown on the card.
+# - links are left-side links
+# - extra are right-side links
 ---
 friday:
   -
@@ -79,7 +82,7 @@ saturdayAM:
     ref: dancehall
     title: "Mouv'Ment Dancer'z"
     links:
-      - https://soundcloud.com/original-ranking-diximal
+      - https://www.facebook.com/MouvMentDancerz/
       - https://www.youtube.com/channel/UC7jHU8mJQjXPnQeJwU9Ihzg
     description: "Dancehall : Lesson and Show"
   -
@@ -101,7 +104,7 @@ saturdayPM:
       - https://www.youtube.com/user/riddimtuffa
     extra:
       - https://www.facebook.com/charliepreggae/
-      - https://www.youtube.com/channel/UCWRa1u0rKFg2WzIiSWV5yJQ
+      - https://youtu.be/Zqi-0fZJEkI
     description: "Reggae – Dub – Dancehall"
   -
     ref: blaze_up_feat_ras_demo
