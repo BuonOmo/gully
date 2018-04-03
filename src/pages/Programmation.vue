@@ -46,8 +46,8 @@
 <style lang="sass" scoped>
   h1
     background-color: #ffdc46
-    width: 500%
-    margin-left: -200%
+    margin-left: -20px
+    margin-right: -20px
     margin-bottom: 40px
     padding: 4px 0
   h1, h1 > nobr

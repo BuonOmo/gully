@@ -1,10 +1,12 @@
 <template>
-    <detail-layout>
-        <p>
-            Pour demander des informations, venir jouer au Gully Sound, devenir bénévole ou pour toutes autres
-            demandes, contactez-nous !
-            <br><a href="mailto:asso.artfact@gmail.com">asso.artfact@gmail.com</a>
-        </p>
+  <detail-layout>
+    <p class="tac">
+      Pour demander des informations, venir jouer au Gully Sound, devenir bénévole ou pour toutes autres
+      demandes, contactez-nous !
+    </p>
+    <p class="tac">
+      <a href="mailto:asso.artfact@gmail.com">asso.artfact@gmail.com</a>
+    </p>
     </detail-layout>
 </template>
 
@@ -17,3 +19,8 @@
     }
   }
 </script>
+
+<style lang="sass" scoped>
+  p.tac
+    text-align: center
+</style>

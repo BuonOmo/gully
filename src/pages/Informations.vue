@@ -6,8 +6,8 @@
       chaleureux entre amis. Depuis la cr&eacute;ation, nous souhaitons proposer une exp&eacute;rience festive entre
       champs et for&ecirc;ts, r&eacute;unissant amateurs et n&eacute;ophytes autour de bonnes vibes reggae. Nous nous
       effor&ccedil;ons d’&ecirc;tre &agrave; la hauteur de nos valeurs : convivialit&eacute;, bienveillance,
-      humilit&eacute;, respect des personnes et de la nature. Toute l’ann&eacute;e, la dtermination et l’engagement
-      b&eacute;n&eacute;vole nous guident avec pour objectif : amliorer continuellement la qualit&eacute; du festival.
+      humilit&eacute;, respect des personnes et de la nature. Toute l’ann&eacute;e, la d&eacute;termination et l’engagement
+      b&eacute;n&eacute;vole nous guident avec pour objectif : am&eacute;liorer continuellement la qualit&eacute; du festival.
       Nous tentons en fonction de nos moyens, de r&eacute;pondre &agrave; vos envies tout en vous proposant de la
       d&eacute;couverte. On esp&egrave;re que vous aurez &agrave; c&oelig;ur de vous approprier cette sixi&egrave;me
       &eacute;dition !

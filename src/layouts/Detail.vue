@@ -7,7 +7,7 @@
     <footer>
       Fait avec &heartsuit; par
       <a href="mailto:buonomo.ulysse@gmail.com">Ulysse</a> sur
-      <a href="https://github.com/buonomo/gully"><i class="fab fa-github"></i></a>
+      <a class="black-link" href="https://github.com/buonomo/gully" target="_blank"><i class="fab fa-github"></i></a>
     </footer>
   </div>
 </template>
@@ -49,7 +49,7 @@
     bottom: 0
 
   main
-    padding: 30px 20px $footer-height
+    padding: 30px 20px $footer-height + 20px
     margin: auto
     overflow: auto
     width: 900px
@@ -68,4 +68,8 @@
       color: darken(steelblue, 1)
     &:visited
       color: maroon
+  .black-link
+    color: black
+    &:hover
+      color: gray
 </style>

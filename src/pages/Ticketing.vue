@@ -9,12 +9,12 @@
 
 <script>
   import DetailLayout from '../layouts/Detail.vue'
-  import CGV from '../resources/CGV.pdf'
+  import cgvFile from '../resources/CGV.pdf'
 
   export default {
     data() {
       return {
-        cgvFile: CGV
+        cgvFile
       }
     },
 
