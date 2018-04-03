@@ -4,6 +4,11 @@
     <main>
       <slot/>
     </main>
+    <footer>
+      Fait avec &heartsuit; par
+      <a href="mailto:buonomo.ulysse@gmail.com">Ulysse</a> sur
+      <a href="https://github.com/buonomo/gully"><i class="fab fa-github"></i></a>
+    </footer>
   </div>
 </template>
 
@@ -28,10 +33,25 @@
     overflow-x: hidden
     // 48px is roughly the navbar height, this min-height allows a clean scrolling.
     min-height: calc(200vh - 48px)
+    position: relative
+
+  $footer-height: 70px
+
+  footer
+    height: $footer-height - 20px
+    margin-top: -$footer-height
+    position: absolute
+    width: 100%
+    text-align: center
+    background-color: snow
+    border-top: 1px solid #eaeaea
+    padding-top: 20px
+    bottom: 0
 
   main
-    padding: 30px 20px 20px
+    padding: 30px 20px $footer-height
     margin: auto
+    overflow: auto
     width: 900px
     max-width: 90%
     *
@@ -41,10 +61,11 @@
     h1
       &:first-letter
         font-family: title, cursive
-    a
-      color: cornflowerblue
-      &:hover
-        color: darken(steelblue, 1)
-      &:visited
-        color: maroon
+  a
+    color: cornflowerblue
+    text-decoration: none
+    &:hover
+      color: darken(steelblue, 1)
+    &:visited
+      color: maroon
 </style>

@@ -33,9 +33,21 @@ window.addEventListener('popstate', () => {
 })
 window.app = app;
 
-/* Preload images */
-for (let i = 0; i < IMAGE_COUNT; i++) {
-  let url = require(`./img/background/2018/${i}.jpg`);
-  let img = new Image();
-  img.src = url;
+/* Preload images when dom is ready */
+function preloadImages() {
+	for (let i = 0; i < IMAGE_COUNT; i++) {
+		let url = require(`./img/background/2018/${i}.jpg`);
+		let img = new Image();
+		img.src = url;
+	}
 }
+
+function ready(fn) {
+	if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading"){
+		fn();
+	} else {
+		document.addEventListener('DOMContentLoaded', fn);
+	}
+}
+
+ready(preloadImages)
