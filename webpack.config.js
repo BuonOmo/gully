@@ -36,7 +36,7 @@ module.exports = {
         use: {
           loader: 'file-loader',
           query: {
-            name: '[name].[ext]?[hash]'
+            name: '[hash].[ext]'
           }
         },
 
