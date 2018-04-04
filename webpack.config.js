@@ -1,5 +1,5 @@
-var path = require('path')
-var webpack = require('webpack')
+const path = require('path')
+const webpack = require('webpack')
 
 module.exports = {
   entry: './src/main.js',
@@ -32,11 +32,7 @@ module.exports = {
         exclude: /node_modules/
       },
       {
-        test: /\.(png|jpe?g)$/i,
-        use: 'url-loader?limit=30000'
-      },
-      {
-        test: /\.(gif|svg|[ot]tf|mp3|pdf)$/i,
+        test: /\.(gif|svg|[ot]tf|mp3|pdf|png|jpe?g)$/i,
         use: {
           loader: 'file-loader',
           query: {
