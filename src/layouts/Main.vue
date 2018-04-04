@@ -55,6 +55,7 @@
   export default {
     data() {
       const music = new Audio(MUSIC_FILE)
+      music.preload = 'none'
       music.addEventListener("ended", () => {
       	this.isPlaying = false
       })
