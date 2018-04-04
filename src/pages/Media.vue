@@ -1,5 +1,14 @@
 <template>
   <detail-layout>
+    <h1 class="no-first-letter">
+      6 ans d&eacute;j&agrave; que l'aventure a d&eacute;but&eacute;, mille merci &agrave; vous !
+    </h1>
+    <div class="poster-container">
+      <img v-for="poster in posters" class="poster" :class="{current: currentPoster === poster, large: currentPoster}"
+           :src="currentPoster === poster ? poster.large : poster.small" :alt="poster.title" :download="poster.title"
+           @click="setCurrentPoster(poster)">
+    </div>
+
     <template v-for="photoGroup in reversePhotoInformation">
       <h1>{{photoGroup.text}}, {{photoGroup.date}}</h1>
       <div class="grid-photo-container">
@@ -31,12 +40,19 @@
   import DetailLayout from '../layouts/Detail.vue'
   import ModalComponent from '../components/Modal.vue'
   import photosInformation from '../img/photos/index.yml'
+  import postersInformation from '../img/posters/index.yml'
 
   export default {
   	data() {
       return {
+      	currentPoster: null,
       	editionCount: photosInformation.length,
       	photosInformation,
+        posters: postersInformation.map((title, index) => ({
+          title,
+          small: require(`../img/posters/180/${index + 1}.jpg`),
+          large: require(`../img/posters/900/${index + 1}.jpg`)
+        })),
         isModal: false,
         modalEdition: -1,
         modalPhoto: -1
@@ -44,9 +60,9 @@
     },
 
     computed: {
-  		reversePhotoInformation() {
-  			return this.photosInformation.slice().reverse()
-        }
+      reversePhotoInformation() {
+      	return this.photosInformation.slice().reverse()
+      },
     },
 
     components: {
@@ -58,6 +74,10 @@
       loadImage(edition, number, size = 'original') {
       	if (![400, 1200, 'original'].includes(size)) throw new Error(`Bad size argument (${size})`)
         return require(`../img/photos/${size}/GULLY_${edition}_${number}.jpg`)
+      },
+
+      setCurrentPoster(poster) {
+      	this.currentPoster = poster;
       },
 
       showModal(edition, number) {
@@ -95,6 +115,26 @@
 <style lang="sass">
 
   $photo-margin: 5px
+
+  .poster-container
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    align-items: center
+
+  .poster
+    width: 16%
+    &.large
+      width: 19.5%
+    &.current
+      margin-top: 5px
+      width: 100%
+      order: 1
+
+  .current-poster
+    margin-top: 5px
+    transition: width .3s ease
+    width: 100%
 
   .grid-photo-container
     /* Prevent vertical gaps */

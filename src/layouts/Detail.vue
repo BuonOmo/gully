@@ -58,9 +58,8 @@
       color: black
     p
       text-align: justify
-    h1
-      &:first-letter
-        font-family: title, cursive
+    h1:not(.no-first-letter):first-letter
+      font-family: title, cursive
   a
     color: cornflowerblue
     text-decoration: none
