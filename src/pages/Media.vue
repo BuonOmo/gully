@@ -5,20 +5,19 @@
       <div class="grid-photo-container">
         <img v-for="n in photoGroup.count"
              @click="showModal(photoGroup, n)"
-             :src="loadImage(photoGroup.edition, n, true)"
+             :src="loadImage(photoGroup.edition, n, 400)"
              :alt="`GULLY_${photoGroup.edition}_${n}.jpg`">
       </div>
     </template>
     <modal-component v-if="isModal" @close="hideModal()">
       <h1 slot="header">{{modalEdition.text}}, {{modalEdition.date}}</h1>
-      <div slot="body">
-        <img class="full-width"
-             :src="loadImage(modalEdition.edition, modalPhoto, false)"
-             :alt="`GULLY_${modalEdition.edition}_${modalPhoto}.jpg`">
-      </div>
+      <img slot="body"
+           class="full-content"
+           :src="loadImage(modalEdition.edition, modalPhoto, 1200)"
+           :alt="`GULLY_${modalEdition.edition}_${modalPhoto}.jpg`">
       <template slot="footer" class="modal-footer">
         <a @click="previous()" v-if="modalEdition.edition < editionCount || modalPhoto > 1">Précédente</a>
-        <a :href="loadImage(modalEdition.edition, modalPhoto, false)"
+        <a :href="loadImage(modalEdition.edition, modalPhoto)"
            :download="`GULLY_${modalEdition.edition}_${modalPhoto}.jpg`">
           Télécharger la photo
         </a>
@@ -56,10 +55,9 @@
     },
 
     methods: {
-      loadImage(edition, number, isThumbnail) {
-        return isThumbnail
-          ? require(`../img/photos/thumbnails/GULLY_${edition}_${number}.jpg`)
-          : require(`../img/photos/GULLY_${edition}_${number}.jpg`)
+      loadImage(edition, number, size = 'original') {
+      	if (![400, 1200, 'original'].includes(size)) throw new Error(`Bad size argument (${size})`)
+        return require(`../img/photos/${size}/GULLY_${edition}_${number}.jpg`)
       },
 
       showModal(edition, number) {
@@ -106,7 +104,6 @@
     column-gap: $photo-margin
 
     > img
-      /* Just in case there are inline attributes */
       width: 100%
       height: auto
       margin-bottom: $photo-margin
@@ -125,8 +122,9 @@
   body.modal-open
     overflow: hidden
   
-  .full-width
-    width: 100%
+  .full-content
+    max-height: 80vh
+    max-width: 90vw
 
   .modal-footer
     display: flex

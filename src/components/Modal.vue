@@ -54,7 +54,7 @@
 
   .modal-container
     position: relative
-    min-width: 1000px
+    width: fit-content
     max-width: 90%
     margin: 0px auto
     padding: 20px 30px
