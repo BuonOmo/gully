@@ -10,7 +10,7 @@
     </div>
 
     <template v-for="photoGroup in reversePhotoInformation">
-      <h1>{{photoGroup.text}}, {{photoGroup.date}}</h1>
+      <h1>{{photoGroup.text}}</h1>
       <div class="grid-photo-container">
         <img v-for="n in photoGroup.count"
              @click="showModal(photoGroup, n)"
@@ -19,7 +19,7 @@
       </div>
     </template>
     <modal-component v-if="isModal" @close="hideModal()">
-      <h1 slot="header">{{modalEdition.text}}, {{modalEdition.date}}</h1>
+      <h1 slot="header">{{modalEdition.text}}</h1>
       <img slot="body"
            class="full-content"
            :src="loadImage(modalEdition.edition, modalPhoto, 1200)"
