@@ -9,7 +9,7 @@
 
 <script>
   import DetailLayout from '../layouts/Detail.vue'
-  import cgvFile from '../resources/CGV.pdf'
+  import cgvFile from '../resources/CGV.jpg'
 
   export default {
     data() {
