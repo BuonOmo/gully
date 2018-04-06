@@ -1,0 +1,32 @@
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+    <url>
+        <loc>http://gullysound.fr/</loc>
+        <changefreq>always</changefreq>
+    </url>
+    <url>
+        <loc>http://gullysound.fr/programmation</loc>
+        <lastmod>2018-04-06</lastmod>
+        <changefreq>yearly</changefreq>
+    </url>
+    <url>
+        <loc>http://gullysound.fr/billeterie</loc>
+        <lastmod>2018-04-06</lastmod>
+        <changefreq>yearly</changefreq>
+    </url>
+    <url>
+        <loc>http://gullysound.fr/infos</loc>
+        <lastmod>2018-04-06</lastmod>
+        <changefreq>yearly</changefreq>
+    </url>
+    <url>
+        <loc>http://gullysound.fr/photos</loc>
+        <lastmod>2018-04-06</lastmod>
+        <changefreq>yearly</changefreq>
+    </url>
+    <url>
+        <loc>http://gullysound.fr/contact</loc>
+        <lastmod>2018-04-06</lastmod>
+    </url>
+</urlset>

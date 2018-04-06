@@ -18,3 +18,14 @@ Celui-ci se fait automatiquement via `travis` lors des push sur la branche `mast
 déclencher un avec :
 
     yarn run deploy
+    
+## Git Pre-Commit
+
+Afin que la date de modification du site indiquée sur le fichier 'humans.txt' reste à jour. Il est conseillé d'ajouter
+un fichier éxécutable `.git/hooks/pre-commit` contenant le code suivant:
+
+    #!/bin/sh
+    
+    sed -i '' -e  "s/last update:.*/last update: $(date +%Y-%m-%d)/" humans.txt 
+    git add humans.txt
+

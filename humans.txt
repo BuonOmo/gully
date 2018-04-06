@@ -1,0 +1,12 @@
+/* TEAM */
+  developper: Ulysse Buonomo
+  contact: buonomo.ulysse [at] gmail.com
+  twitter: @ulyssebn
+  from: Grenoble, Rhône-Alpe, France
+
+  designer: Olivier Paquelet
+  contact: olivier_paquelet [at] outlook.fr
+  from: Lyon, Rhône-Alpe, France
+
+ /* SITE */
+   last update: 2018-04-06
