@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import routes from './routes'
+import routes, {generatePageTitle} from './routes'
 import ScrollPolyfill from 'smoothscroll-polyfill'
 
 export const IMAGE_COUNT = 27
@@ -17,9 +17,10 @@ const app = new Vue({
   },
   computed: {
     ViewComponent() {
-      const matchingView = routes[this.currentRoute]
-      return matchingView
-        ? require('./pages/' + matchingView + '.vue')
+      const matchingRoute = routes[this.currentRoute]
+      document.title = matchingRoute ? matchingRoute.title : generatePageTitle('Page introuvable')
+      return matchingRoute
+        ? require('./pages/' + matchingRoute.view + '.vue')
         : require('./pages/404.vue')
     }
   },
