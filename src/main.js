@@ -35,9 +35,11 @@ window.app = app;
 
 /* Preload images when dom is ready */
 function preloadImages() {
+	const current = +sessionStorage.getItem('GULLY_background') || IMAGE_COUNT - 1
 	for (let i = 0; i < IMAGE_COUNT; i++) {
-		let url = require(`./img/background/2018/${i}.jpg`);
+		let url = require(`./img/background/2018/bg-${i}.jpg`);
 		let img = new Image();
+		img.decoding = i === current ? 'sync' : 'async'
 		img.src = url;
 	}
 }

@@ -8,19 +8,29 @@
       <nav id="navbar">
         <ul>
           <li>
-            <v-link href="/programmation">Programmation</v-link>
+            <v-link href="/programmation" alt="Retrouvez la programmation complète du festival !">
+              Programmation
+            </v-link>
           </li>
           <li>
-            <v-link href="/billeterie">Billeterie</v-link>
+            <v-link href="/billeterie" alt="Achetez vos préventes pour samedi, dimanche ou les deux soirs.">
+              Billeterie
+            </v-link>
           </li>
           <li>
-            <v-link href="/infos">Infos pratiques</v-link>
+            <v-link href="/infos" alt="Pour tout savoir sur le Gully, accès au festival, la bouffe, s'il pleut, etc.">
+              Infos pratiques
+            </v-link>
           </li>
           <li>
-            <v-link href="/photos">Photos</v-link>
+            <v-link href="/photos" alt="Souvenirs des éditions précédentes depuis 2013.">
+              Photos
+            </v-link>
           </li>
           <li>
-            <v-link href="/contact">Contact</v-link>
+            <v-link href="/contact" alt="Vous voulez venir jouer au Gully, poser une question ? Contactez-nous !">
+              Contact
+            </v-link>
           </li>
         </ul>
       </nav>
@@ -221,4 +231,7 @@
     margin-right: -20px
     font-style: italic
     font-size: 12px
+
+  img
+    image-rendering: pixelated
 </style>
