@@ -42,7 +42,7 @@
         const deltaX = this.endX - this.startX
         const deltaY = this.endY - this.startY
         // Min swipe distance
-        if (deltaX ** 2 + deltaY ** 2 < this.threshold ** 2) return
+        if (Math.pow(deltaX, 2) + Math.pow(deltaY, 2) < Math.pow(this.threshold, 2)) return
 
         if (deltaY === 0 || Math.abs(deltaX / deltaY) > 1) // horizontal
           this.direction = deltaX > 0 ? directions.RIGHT : directions.LEFT
