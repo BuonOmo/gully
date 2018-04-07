@@ -1,9 +1,9 @@
 <template>
   <div>
     <v-link href="/" class="image-container"><img class="top-logo" src="../img/logo.png" width="150px"></v-link>
-    <div class="background" :class="'background-' + background">
-      <a class="arrow left" @click="previousImage()"><i class="fa fa-4x fa-chevron-left"></i></a>
-      <a class="arrow right" @click="nextImage()"><i class="fa fa-4x fa-chevron-right"></i></a>
+    <swipe class="background" @swiperight="nextImage" @swipeleft="previousImage" :class="'background-' + background">
+      <a class="arrow left" @click="previousImage"><i class="fa fa-4x fa-chevron-left"></i></a>
+      <a class="arrow right" @click="nextImage"><i class="fa fa-4x fa-chevron-right"></i></a>
       <slot/>
       <nav id="navbar">
         <ul>
@@ -53,12 +53,13 @@
           </a>
         </p>
       </aside>
-    </div>
+    </swipe>
   </div>
 </template>
 
 <script>
   import VLink from '../components/VLink.vue'
+  import Swipe from '../components/Swipe.vue'
   import MUSIC_FILE from '../lo_gully-sound-system.mp3'
   import {IMAGE_COUNT} from '../main'
 
@@ -79,31 +80,32 @@
 
     watch: {
       background(newValue) {
-        sessionStorage.setItem('GULLY_background', newValue);
+        sessionStorage.setItem('GULLY_background', newValue)
       }
     },
 
     methods: {
       play() {
         if (this.music.paused) {
-          this.music.play();
+          this.music.play()
         } else {
-          this.music.pause();
+          this.music.pause()
         }
-        this.isPlaying = !this.music.paused;
+        this.isPlaying = !this.music.paused
       },
 
       nextImage() {
-        this.background = (this.background + 1) % IMAGE_COUNT;
+        this.background = (this.background + 1) % IMAGE_COUNT
       },
 
       previousImage() {
-        this.background = (IMAGE_COUNT + this.background - 1) % IMAGE_COUNT;
+        this.background = (IMAGE_COUNT + this.background - 1) % IMAGE_COUNT
       }
     },
 
     components: {
-      VLink
+      VLink,
+      Swipe
     }
   }
 </script>

@@ -59,8 +59,6 @@
         return Math.trunc((this.dateNumber - this.now) / 60 / 60 / 24);
       }
     }
-
-    /* Computed properties will be here */
   }
 </script>
 
