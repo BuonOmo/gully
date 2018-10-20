@@ -12,11 +12,11 @@
               Programmation
             </v-link>
           </li>
-          <li>
-            <v-link href="/billeterie" alt="Achetez vos préventes pour samedi, dimanche ou les deux soirs.">
-              Billeterie
-            </v-link>
-          </li>
+          <!--<li>-->
+            <!--<v-link href="/billeterie" alt="Achetez vos préventes pour samedi, dimanche ou les deux soirs.">-->
+              <!--Billeterie-->
+            <!--</v-link>-->
+          <!--</li>-->
           <li>
             <v-link href="/infos" alt="Pour tout savoir sur le Gully, accès au festival, la bouffe, s'il pleut, etc.">
               Infos pratiques
@@ -37,9 +37,11 @@
       <aside class="top-links">
         <ul>
           <li class="music-button"><a v-on:click="play()" class="click">
-            <i class="fa fa-2x second-color" :class="isPlaying?'fa-pause':'fa-play'" aria-hidden="true"></i>
+            <i class="fa fa-2x color accent"
+               :class="isPlaying?'fa-pause':'fa-play'"
+               aria-hidden="true"></i>
           </a></li>
-          <li><a href="https://www.facebook.com/artfactassociation/" target="_blank">
+          <li><a href="https://www.facebook.com/FestivalGullySound/" target="_blank">
             <i class="fab fa-2x fa-facebook" aria-hidden="true"></i>
           </a></li>
           <li><a href="https://www.youtube.com/channel/UC5CBBUAr0w1HHjV4HxYSmSA" target="_blank">
@@ -111,9 +113,12 @@
 </script>
 
 <style lang="sass">
-  $primary-color: snow
-  $second-color: #ffdc46
+  @import '../palette'
+
   $image-count: 27
+
+  .color.accent
+    color: $accent-color
 
   .fa.fa-4
     font-size: xx-large
@@ -164,7 +169,7 @@
   /*                                                                                           FONTS AND GENERIC TAGS */
   @font-face
     font-family: 'title'
-    src: url("../fonts/CutMeOut3.ttf")
+    src: url("../fonts/Draconian.ttf")
 
   @font-face
     font-family: 'main'
@@ -174,8 +179,6 @@
     font-family: main, serif
 
   .background
-    .second-color
-      color: $second-color
     *
       color: $primary-color
     nav *

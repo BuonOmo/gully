@@ -1,7 +1,10 @@
 <template>
   <main-layout class="no-top-logo">
-    <countdown date="Fri July 20 20:00:00 2018 UTC+2"/>
-    <div class="center-logo-ctn"><img src="../img/logo.png" class="center-logo"></div>
+    <div class="center-logo-ctn">
+      <img src="../img/logo.png" class="center-logo">
+    </div>
+    <countdown :date="date"/>
+
   </main-layout>
 </template>
 
@@ -13,6 +16,11 @@
     components: {
       MainLayout,
       Countdown
+    },
+    data () {
+      return {
+        date: new Date("Fri July 19 18:00:00 2019 UTC+2")
+      }
     }
   }
 </script>

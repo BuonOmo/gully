@@ -38,10 +38,10 @@
 </script>
 
 <style lang="sass" scoped>
-  $images: ackee_satlfish bhale_bacce_crew blaze_up_feat_ras_demo dancehall dub_addict_feat_joe_pilgrim dubamix foot
-  $images: join($images, graffititi iternal_sound_feat_ranking_diximal king_hifi_feat_lasai proleter rasputain)
-  $images: join($images, red_rockers_meets_king_everald riddim_tuffa_feat_charlie_p ruff_n_tuff sumac_dub)
-  $images: join($images, skankin_sound_feat_mc_akro slackline sonorisation sound_systems_locaux steep_bank_project)
+  // $images: ackee_satlfish bhale_bacce_crew blaze_up_feat_ras_demo dancehall dub_addict_feat_joe_pilgrim dubamix foot
+  // $images: join($images, graffititi iternal_sound_feat_ranking_diximal king_hifi_feat_lasai proleter rasputain)
+  // $images: join($images, red_rockers_meets_king_everald riddim_tuffa_feat_charlie_p ruff_n_tuff sumac_dub)
+  // $images: join($images, skankin_sound_feat_mc_akro slackline sonorisation sound_systems_locaux steep_bank_project)
 
   $card-width: 840px
 
@@ -54,10 +54,10 @@
     justify-content: space-around
     align-items: center
 
-  @each $image in $images
-    .#{$image}
-      background-image: url('../img/artists/#{$image}.jpg')
-      background-size: contain
+  //@each $image in $images
+  //  .#{$image}
+  //    background-image: url('../img/artists/#{$image}.jpg')
+  //    background-size: contain
 
   .wrapper
     margin: 10px

@@ -1,7 +1,7 @@
 <template>
   <detail-layout>
-    <h1 class="no-first-letter">
-      6 ans d&eacute;j&agrave; que l'aventure a d&eacute;but&eacute;, mille mercis &agrave; vous !
+    <h1>
+      D&eacute;j&agrave; 7 ans  que l'aventure a d&eacute;but&eacute;, mille mercis &agrave; vous !
     </h1>
     <div class="poster-container">
       <img v-for="poster in posters"

@@ -1,25 +1,30 @@
 <template>
-  <span class="block-container" v-if="now < dateNumber">
-    <div class="block">
-      <p class="digit">{{ days }}</p>
-      <p class="text">Jours</p>
+  <span class="container">
+    <div class="main block-container">
+      <div class="block">
+        <p class="digit">{{ days }}</p>
+        <p class="text">Jours</p>
+      </div>
+      <div class="block">
+        <p class="digit">{{ hours | two_digits }}</p>
+        <p class="text">Heures</p>
+      </div>
+      <div class="block">
+        <p class="digit">{{ minutes | two_digits }}</p>
+        <p class="text">Minutes</p>
+      </div>
+      <div class="block">
+        <p class="digit">{{ seconds | two_digits }}</p>
+        <p class="text">Secondes</p>
+      </div>
     </div>
-    <div class="block">
-      <p class="digit">{{ hours | two_digits }}</p>
-      <p class="text">Heures</p>
-    </div>
-    <div class="block">
-      <p class="digit">{{ minutes | two_digits }}</p>
-      <p class="text">Minutes</p>
-    </div>
-    <div class="block">
-      <p class="digit">{{ seconds | two_digits }}</p>
-      <p class="text">Secondes</p>
+    <div class="alternative text-container">
+      <div class="text-content">
+        19 <span class="color accent">&</span> 20 juillet
+        {{ date.getFullYear() }}
+      </div>
     </div>
   </span>
-  <div v-else>
-    C'est parti mon kiki !
-  </div>
 </template>
 
 <script>
@@ -31,15 +36,14 @@
     },
 
     props: {
-      date: {
-        type: String
-      }
+      date: Date
     },
 
     data() {
       return {
         now: Math.trunc(Date.now() / 1000),
-        dateNumber: Math.trunc(Date.parse(this.date) / 1000)
+        dateNumber: Math.trunc(this.date.getTime() / 1000),
+        hovering: false
       }
     },
     computed: {
@@ -65,10 +69,37 @@
 <style lang="sass" scoped>
   @import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:400|Roboto:100)
 
+  *
+    font-family: 'Roboto', serif
+
+  .alternative
+    /*display: none*/
+    font-size: x-large
+    text-align: center
+    margin-top: 4px
+    margin-left: 4px
+
   .block-container
     width: 270px
     display: flex
     flex-direction: row
+
+  .text-container
+    width: 270px
+    justify-content: center
+    align-items: center
+    .text-content
+      font-family: 'Roboto', serif
+      width: auto
+      height: auto
+      font-size: xx-large
+
+  .container
+    z-index: 100
+    position: absolute
+    top: 0
+    min-width: 270px
+    min-height: 85px
 
   .block
     display: flex

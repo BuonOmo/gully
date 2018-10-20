@@ -9,7 +9,7 @@
       humilit&eacute;, respect des personnes et de la nature. Toute l’ann&eacute;e, la d&eacute;termination et l’engagement
       b&eacute;n&eacute;vole nous guident avec pour objectif : am&eacute;liorer continuellement la qualit&eacute; du festival.
       Nous tentons en fonction de nos moyens, de r&eacute;pondre &agrave; vos envies tout en vous proposant de la
-      d&eacute;couverte. On esp&egrave;re que vous aurez &agrave; c&oelig;ur de vous approprier cette sixi&egrave;me
+      d&eacute;couverte. On esp&egrave;re que vous aurez &agrave; c&oelig;ur de vous approprier cette septi&egrave;me
       &eacute;dition !
     </p>
     <h1>Acc&egrave;s au festival</h1>
@@ -25,7 +25,7 @@
       en stop pour les plus courageux&nbsp;!</p>
     <p>
       On vous encourage fortement &agrave; faire du covoiturage et laisser une annonce sur
-      <a target="_blank" href="https://www.facebook.com/events/156883218350218/">la page de l&rsquo;&eacute;v&egrave;nement Facebook</a>.
+      <a target="_blank" href="https://www.facebook.com/events/2284839384877754/">la page de l&rsquo;&eacute;v&egrave;nement Facebook</a>.
     </p>
     <p>
       Pour ceux qui viendraient en v&eacute;lo, l&rsquo;organisation s&rsquo;engage &agrave; offrir deux boissons par

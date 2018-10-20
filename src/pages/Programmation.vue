@@ -1,24 +1,37 @@
 <template>
   <detail-layout>
-    <h1>Vendredi 20 juillet
-      <nobr>20h-3h30</nobr>
-    </h1>
-    <artist-card :artist="artist" v-for="artist in artists.friday" :key="artist.ref"/>
-    <h1>Samedi 21 juillet
-      <nobr>14h-20h</nobr>
-    </h1>
-    <artist-card :artist="artist" v-for="artist in artists.saturdayAM" :key="artist.ref"/>
-    <h1>Samedi 21 juillet
-      <nobr>20h30-5h</nobr>
-    </h1>
-    <artist-card :artist="artist" v-for="artist in artists.saturdayPM" :key="artist.ref"/>
-    <h1>Sonorisation</h1>
-    <artist-card :artist="artists.sonorisation"/>
-    <p class="tac">Vous pouvez aussi télécharger le détail de la programmation
-      <a :href="progFile" download="Programmation.jpg">ici</a>&nbsp;!</p>
-    <h1>Aperçu de l'édition 2017</h1>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/A2awFT8ErS8" frameborder="0"
+    <h1>Apercu de l'edition 2018</h1>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/EPUR9OHktBo" frameborder="0"
             allowfullscreen></iframe>
+    <h1>Programmation a venir...</h1>
+    <p class="justify">
+      D'ici quelques temps, tu trouveras ici la programmation pour les soirée du vendredi
+      19 et samedi 20 juillet. Ainsi que toutes les activités durant le festival.
+      Pour être le premier au courant, n'hésite pas à suivre
+      <a href="https://www.facebook.com/events/2284839384877754/">la page facebook de l'évenement</a>! Et pour toutes
+      les infos sur notre asso, c'est <a href="https://www.facebook.com/FestivalGullySound/">ici</a>.
+    </p>
+    <!--<h1>Vendredi 19 juillet-->
+      <!--<nobr>18h-3h30</nobr>-->
+    <!--</h1>-->
+    <!--<p class="tac">-->
+      <!--Programmation à venir...-->
+    <!--</p>-->
+    <!--&lt;!&ndash;<artist-card :artist="artist" v-for="artist in artists.friday" :key="artist.ref"/>&ndash;&gt;-->
+    <!--<h1>Samedi 20 juillet-->
+      <!--<nobr>14h-21h</nobr>-->
+    <!--</h1>-->
+    <!--<p class="tac">-->
+      <!--Programmation à venir...-->
+    <!--</p>-->
+    <!--&lt;!&ndash;<artist-card :artist="artist" v-for="artist in artists.saturdayAM" :key="artist.ref"/>&ndash;&gt;-->
+    <!--<h1>Samedi 21 juillet-->
+      <!--<nobr>21h-5h</nobr>-->
+    <!--</h1>-->
+    <!--<p class="tac">-->
+      <!--Programmation à venir...-->
+    <!--</p>-->
+    <!--<artist-card :artist="artist" v-for="artist in artists.saturdayPM" :key="artist.ref"/>-->
   </detail-layout>
 </template>
 
@@ -26,13 +39,13 @@
   import DetailLayout from '../layouts/Detail.vue'
   import ArtistCard from '../components/ArtistCard.vue'
   import PROG_FILE from '../img/programmation.jpg'
-  import ARTISTS from '../img/artists/index.yml'
+  // import ARTISTS from '../img/artists/index.yml'
 
   export default {
     data() {
       return {
         progFile: PROG_FILE,
-        artists: ARTISTS
+        // artists: ARTISTS
       }
     },
 
@@ -44,8 +57,10 @@
 </script>
 
 <style lang="sass" scoped>
+  @import '../palette'
+
   h1
-    background-color: #ffdc46
+    background-color: $accent-color
     margin-left: -20px
     margin-right: -20px
     margin-bottom: 40px
@@ -62,6 +77,9 @@
     padding-top: 40px
     text-align: center
 
+  .justify
+    padding-top: 40px
+    text-align: justify
   iframe
     display: block
     margin: auto
