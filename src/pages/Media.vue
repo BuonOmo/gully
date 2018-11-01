@@ -4,8 +4,13 @@
       6 ans d&eacute;j&agrave; que l'aventure a d&eacute;but&eacute;, mille mercis &agrave; vous !
     </h1>
     <div class="poster-container">
-      <img v-for="poster in posters" class="poster" :class="{current: currentPoster === poster, large: currentPoster}"
-           :src="currentPoster === poster ? poster.large : poster.small" :alt="poster.title" :download="poster.title"
+      <img v-for="poster in posters"
+           class="poster"
+           :class="{'with-action': currentPoster !== poster,
+                    'current': currentPoster === poster,
+                    'large': currentPoster !== null}"
+           :src="currentPoster === poster ? poster.large : poster.small"
+           :alt="poster.title" :download="poster.title"
            @click="setCurrentPoster(poster)">
     </div>
 
@@ -13,6 +18,7 @@
       <h1>{{photoGroup.text}}</h1>
       <div class="grid-photo-container">
         <img v-for="n in photoGroup.count"
+             class="with-action"
              @click="showModal(photoGroup, n)"
              :src="loadImage(photoGroup.edition, n, 400)"
              :alt="`GULLY_${photoGroup.edition}_${n}.jpg`">
@@ -115,6 +121,9 @@
 <style lang="sass">
 
   $photo-margin: 5px
+
+  .with-action
+    cursor: pointer
 
   .poster-container
     display: flex
