@@ -18,10 +18,14 @@
         <p class="text">Secondes</p>
       </div>
     </div>
-    <div class="alternative text-container">
+    <div class="alternative text-container marquee">
       <div class="text-content">
         19 <span class="color accent">&</span> 20 juillet
         {{ date.getFullYear() }}
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        –
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        Arandas (Ain)
       </div>
     </div>
   </span>
@@ -78,6 +82,32 @@
     text-align: center
     margin-top: 4px
     margin-left: 4px
+
+  .marquee
+    height: 50px
+    position: relative
+    overflow: hidden
+    white-space: nowrap
+
+  .marquee div
+    position: absolute
+    width: 100%
+    height: 100%
+    margin: 0
+    line-height: 50px
+    text-align: center
+    transform: translateX(0%)
+    animation: slide 8s ease alternate infinite
+
+  @keyframes slide
+    0%
+      transform: translateX(0%)
+    33%
+      transform: translateX(0%)
+    66%
+      transform: translateX(-59%)
+    100%
+      transform: translateX(-59%)
 
   .block-container
     width: 270px
