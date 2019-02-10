@@ -49,31 +49,51 @@
   import postersInformation from '../img/posters/index.yml'
 
   export default {
-  	data() {
+    data() {
+      const urlParams = new URLSearchParams(window.location.search)
+
       return {
-      	currentPoster: null,
-      	editionCount: photosInformation.length,
-      	photosInformation,
+        currentPoster: null,
+        editionCount: photosInformation.length,
+        photosInformation,
         posters: postersInformation.map((title, index) => ({
           title,
           small: require(`../img/posters/180/${index + 1}.jpg`),
           large: require(`../img/posters/900/${index + 1}.jpg`)
         })),
-        isModal: false,
-        modalEdition: -1,
-        modalPhoto: -1
+        modalEdition: urlParams.get('edition') === null
+          ? null
+          : photosInformation.find(info => info.edition === Number(urlParams.get('edition'))),
+        modalPhoto: urlParams.get('photo') === null
+          ? null
+          : Number(urlParams.get('photo'))
       }
     },
 
     computed: {
       reversePhotoInformation() {
-      	return this.photosInformation.slice().reverse()
+        return this.photosInformation.slice().reverse()
       },
+      isModal() {
+        return this.modalEdition != null && this.modalPhoto != null
+      }
     },
 
     components: {
       DetailLayout,
       ModalComponent
+    },
+
+    watch: {
+      modalPhoto(photo, oldPhoto) {
+        if (!history.pushState) return
+        if (this.modalEdition == null && oldPhoto == null) return
+
+        let newURL = window.location.protocol + "//" + window.location.host + window.location.pathname
+        if (photo != null)
+          newURL += `?edition=${this.modalEdition.edition}&photo=${photo}`
+        window.history.pushState({path: newURL},'' , newURL)
+      },
     },
 
     methods: {
@@ -85,24 +105,24 @@
       },
 
       setCurrentPoster(poster) {
-      	this.currentPoster = poster;
+        this.currentPoster = poster;
       },
 
       showModal(edition, number) {
-      	if (screen.width <= 1000) return
-      	this.modalEdition = edition
+        if (screen.width <= 1000) return
+        this.modalEdition = edition
         this.modalPhoto = number
-        this.isModal = true
         document.body.classList.add('modal-open')
       },
 
       hideModal() {
-        this.isModal = false
+        this.modalEdition = null
+        this.modalPhoto = null
         document.body.classList.remove('modal-open')
       },
 
       previous() {
-      	this.modalPhoto--
+        this.modalPhoto--
         if (this.modalPhoto < 1) {
           this.modalEdition = this.photosInformation[this.modalEdition.edition]
           this.modalPhoto = this.modalEdition.count
@@ -110,7 +130,7 @@
       },
 
       next() {
-      	this.modalPhoto++
+        this.modalPhoto++
         if (this.modalPhoto > this.modalEdition.count) {
           this.modalPhoto = 1
           this.modalEdition = this.photosInformation[this.modalEdition.edition - 2]
