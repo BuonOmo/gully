@@ -78,8 +78,10 @@
 
     methods: {
       loadImage(edition, number, size = 'original') {
-      	if (![400, 1200, 'original'].includes(size)) throw new Error(`Bad size argument (${size})`)
-        return require(`../img/photos/${size}/GULLY_${edition}_${number}.jpg`)
+        if (typeof size === 'number')
+          return `https://res.cloudinary.com/gully/image/upload/c_fit,w_${size}/photos/GULLY_${edition}_${number}.jpg`
+        else
+          return `https://res.cloudinary.com/gully/image/upload/photos/GULLY_${edition}_${number}.jpg`
       },
 
       setCurrentPoster(poster) {
