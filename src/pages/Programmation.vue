@@ -5,7 +5,7 @@
             allowfullscreen></iframe>
     <h1>Programmation a venir...</h1>
     <p class="justify">
-      D'ici quelques temps, tu trouveras ici la programmation pour les soirée du vendredi
+      D'ici quelques temps, tu trouveras ici la programmation pour les soirées du vendredi
       19 et samedi 20 juillet. Ainsi que toutes les activités durant le festival.
       Pour être le premier au courant, n'hésite pas à suivre
       <a href="https://www.facebook.com/events/2284839384877754/">la page facebook de l'évenement</a>! Et pour toutes
