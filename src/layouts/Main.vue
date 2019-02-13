@@ -115,7 +115,7 @@
 <style lang="sass">
   @import '../palette'
 
-  $image-count: 27
+  $image-count: 21
 
   .color.accent
     color: $accent-color
@@ -164,7 +164,7 @@
     transition: background-image .4s ease-in-out
     @for $i from 0 through $image-count - 1
       &.background-#{$i}
-        background-image: url('../img/background/2018/bg-#{$i}.jpg')
+        background-image: url('../img/background/2019/bg-#{$i}.jpg')
 
   /*                                                                                           FONTS AND GENERIC TAGS */
   @font-face

@@ -2,7 +2,7 @@ import Vue from 'vue'
 import routes, {generatePageTitle} from './routes'
 import ScrollPolyfill from 'smoothscroll-polyfill'
 
-export const IMAGE_COUNT = 27
+export const IMAGE_COUNT = 21
 
 ScrollPolyfill.polyfill();
 
