@@ -1,7 +1,7 @@
 <template>
   <detail-layout>
     <h1>
-      D&eacute;j&agrave; 7 ans  que l'aventure a d&eacute;but&eacute;, mille mercis &agrave; vous !
+      D&eacute;j&agrave; 7 ans  que l'aventure a d&eacute;but&eacute;, merci &agrave; vous !
     </h1>
     <div class="poster-container">
       <img v-for="poster in posters"
@@ -109,7 +109,6 @@
       },
 
       showModal(edition, number) {
-        if (screen.width <= 1000) return
         this.modalEdition = edition
         this.modalPhoto = number
         document.body.classList.add('modal-open')
@@ -154,9 +153,9 @@
     align-items: center
 
   .poster
-    width: 16%
+    width: 14%
     &.large
-      width: 19.5%
+      width: 16%
     &.current
       margin-top: 5px
       width: 100%
@@ -192,7 +191,7 @@
   /**** Modal Styling ****/
   body.modal-open
     overflow: hidden
-  
+
   .full-content
     max-height: 80vh
     max-width: 90vw
