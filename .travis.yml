@@ -1,7 +1,7 @@
 language: node_js
 node_js: 7
 script:
-  - export DOMAIN_URL=$( [[ $TRAVIS_BRANCH = master ]] && echo gullysound.fr || echo gully.surge.sh )
+  - export DOMAIN_URL=$( [[ $TRAVIS_BRANCH = master ]] && echo gullysound.fr || echo gully-$TRAVIS_BRANCH.surge.sh | tr '/' '_' )
   - echo The site will be deployed under $DOMAIN_URL
   - npm run build
 deploy:
@@ -9,6 +9,8 @@ deploy:
   project: .
   domain: $DOMAIN_URL
   skip_cleanup: true
+  on:
+    all_branches: true
 cache:
   directories:
     - node_modules

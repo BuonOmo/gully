@@ -2,7 +2,7 @@
   <ul>
     <li v-for="link in list">
       <a :href="link" target="_blank">
-        <i :class="`spec-font-size ${getFontAwesomeLogoFromLink(link)}`" ></i>
+        <i class="link-icon" :class="getFontAwesomeLogoFromLink(link)" ></i>
       </a>
     </li>
   </ul>
@@ -19,8 +19,15 @@
     methods: {
       getFontAwesomeLogoFromLink(link) {
         const basename = link.match(/https?:\/\/(?:www.)?([^.]+)/)[1]
-        return ['facebook', 'twitter', 'soundcloud', 'youtube'].includes(basename)
-          ? `fab fa-${basename}`
+        const faTitle = {
+          facebook: 'facebook',
+          twitter: 'twitter',
+          soundcloud: 'soundcloud',
+          youtu: 'youtube',
+          youtube: 'youtube'
+        }
+        return faTitle[basename] !== undefined
+          ? `fab fa-${faTitle[basename]}`
           : 'fas fa-globe'
       }
     }
@@ -37,13 +44,15 @@
     align-items: center
     justify-content: space-evenly
     height: 100px
+    mix-blend-mode: difference
 
 
-  .spec-font-size
-    font-size: 1.7em
+  .link-icon
+    font-size: 1.2em
 
   a
     color: #282861
+    color: white
     &:hover
       color: lighten(#282861, 20%)
     &:visited

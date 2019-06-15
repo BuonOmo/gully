@@ -1,16 +1,13 @@
 <template>
-  <div class="card-container">
-    <aside>
-      <link-list :list="artist.links" />
-    </aside>
+  <div class="artist-card card-container" :class="{wide: wide}">
     <div class="wrapper" :class="artist.ref">
       <div><!-- this is for CSS border purpose --></div>
       <span class="text title">{{ artist.title }}</span>
       <span class="text description" v-if="artist.description">{{ artist.description }}</span>
+      <aside>
+        <link-list :list="artist.links" />
+      </aside>
     </div>
-    <aside :class="{empty: !artist.extra}">
-      <link-list :list="artist.extra" />
-    </aside>
   </div>
 </template>
 
@@ -18,11 +15,30 @@
   import LinkList from './LinkList.vue'
 
   export default {
+
     props: {
       artist: {
         type: Object,
+        /*
         required: true
+        /*/
+        // debug:
+        default () {
+          return {
+            description: "Live reggae dub",
+            ref: 'steep_bank_project',
+            title: "Steep Bank Project",
+            links: ['https://www.facebook.com/SteepBankProject/',
+                    'https://www.youtube.com/channel/UCD-0DEfsfBWqmtFDe4t9DaQ',
+                    'https://soundcloud.com/mc-akro']
+          }
+        }
+        //*/
       },
+      wide: {
+        type: Boolean,
+        default: false
+      }
     },
 
     components: {
@@ -38,22 +54,22 @@
 </script>
 
 <style lang="sass" scoped>
+  // Update this using a system like Klaxit insight's palette:
   // $images: ackee_satlfish bhale_bacce_crew blaze_up_feat_ras_demo dancehall dub_addict_feat_joe_pilgrim dubamix foot
   // $images: join($images, graffititi iternal_sound_feat_ranking_diximal king_hifi_feat_lasai proleter rasputain)
   // $images: join($images, red_rockers_meets_king_everald riddim_tuffa_feat_charlie_p ruff_n_tuff sumac_dub)
   // $images: join($images, skankin_sound_feat_mc_akro slackline sonorisation sound_systems_locaux steep_bank_project)
 
-  $card-width: 840px
+  $card-width: 240px
 
   aside
-    width: 30px
-    min-height: 28px
+    position: absolute
+    top: 8px
+    right: 8px
 
-  .card-container
-    display: flex
-    justify-content: space-around
-    align-items: center
-
+  .steep_bank_project
+    background-image: url('https://picsum.photos/240/240')
+    background-size: contain
   //@each $image in $images
   //  .#{$image}
   //    background-image: url('../img/artists/#{$image}.jpg')
@@ -63,20 +79,23 @@
     margin: 10px
     position: relative
     width: $card-width
-    height: $card-width / 4
-
-    div
-      width: 100%
-      height: 100%
-      box-sizing: border-box
-      mix-blend-mode: screen
-      border: 4px groove
+    height: $card-width
+    .wide &
+      width: 2 * $card-width + 30px + 20px
 
     &:hover
+      div
+        width: 100%
+        height: 100%
+        box-sizing: border-box
+        background-image: url('https://picsum.photos/240/240')
+        background-size: contain
+        filter: blur(2px)
+        mix-blend-mode: color
       .title
-        transform: translate($card-width*0.18) scale(1.6)
+        transform: translate($card-width*0.04) scale(1.08)
       .description
-        transform: translate(- $card-width*0.18) scale(1.6)
+        transform: translate(- $card-width*0.04) scale(1.08)
 
   .text
     transition: transform 0.3s ease
@@ -94,6 +113,16 @@
       right: 4px
 
   @media only screen and (max-device-width: 480px)
+    .wrapper
+      width: 78vw
+      height: 78vw
+      .wide &
+        height: 39vw
+      &:hover
+        .title
+          transform: translate(80vw*0.04) scale(1.08)
+        .description
+          transform: translate(-80vw*0.04) scale(1.08)
     .text
       font-size: 1.4em
 
