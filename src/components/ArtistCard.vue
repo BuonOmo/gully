@@ -1,11 +1,11 @@
 <template>
-  <div class="artist-card card-container" :class="{wide: wide}">
-    <div class="wrapper" :class="artist.ref">
+  <div class="artist-card card-container">
+    <div class="wrapper" :style="{'background-image': `url(${image})`}">
       <div><!-- this is for CSS border purpose --></div>
-      <span class="text title">{{ artist.title }}</span>
-      <span class="text description" v-if="artist.description">{{ artist.description }}</span>
+      <span class="text title" v-html="name"></span>
+      <span class="text description" v-if="description" v-html="description"></span>
       <aside>
-        <link-list :list="artist.links" />
+        <link-list :list="links" />
       </aside>
     </div>
   </div>
@@ -17,28 +17,43 @@
   export default {
 
     props: {
-      artist: {
-        type: Object,
-        /*
-        required: true
-        /*/
-        // debug:
-        default () {
-          return {
-            description: "Live reggae dub",
-            ref: 'steep_bank_project',
-            title: "Steep Bank Project",
-            links: ['https://www.facebook.com/SteepBankProject/',
-                    'https://www.youtube.com/channel/UCD-0DEfsfBWqmtFDe4t9DaQ',
-                    'https://soundcloud.com/mc-akro']
-          }
-        }
+      name: {
+        type: String,
+        //*
+        required: true,
+        /*/ DEBUG
+        default: "Steep Bank Project"
         //*/
       },
-      wide: {
-        type: Boolean,
-        default: false
+      description: {
+        type: String,
+        //*
+        required: true,
+        /*/ DEBUG
+        default: "Live reggae dub"
+        //*/
+      },
+      links: {
+        type: Array[String],
+        //*
+        default: () => []
+        /*/ DEBUG
+        default: () => [
+          'https://www.facebook.com/SteepBankProject/',
+          'https://www.youtube.com/channel/UCD-0DEfsfBWqmtFDe4t9DaQ',
+          'https://soundcloud.com/mc-akro'
+        ]
+        //*/
       }
+    },
+
+    computed: {
+      ref () {
+        return this.name.toLowerCase().replace(/[^\w]+/g, '_')
+      },
+      image () {
+        return `https://res.cloudinary.com/gully/image/upload/c_fit,w_240/artists/${this.ref}.jpg`
+      },
     },
 
     components: {
@@ -54,12 +69,6 @@
 </script>
 
 <style lang="sass" scoped>
-  // Update this using a system like Klaxit insight's palette:
-  // $images: ackee_satlfish bhale_bacce_crew blaze_up_feat_ras_demo dancehall dub_addict_feat_joe_pilgrim dubamix foot
-  // $images: join($images, graffititi iternal_sound_feat_ranking_diximal king_hifi_feat_lasai proleter rasputain)
-  // $images: join($images, red_rockers_meets_king_everald riddim_tuffa_feat_charlie_p ruff_n_tuff sumac_dub)
-  // $images: join($images, skankin_sound_feat_mc_akro slackline sonorisation sound_systems_locaux steep_bank_project)
-
   $card-width: 240px
 
   aside
@@ -67,31 +76,19 @@
     top: 8px
     right: 8px
 
-  .steep_bank_project
-    background-image: url('https://picsum.photos/240/240')
-    background-size: contain
-  //@each $image in $images
-  //  .#{$image}
-  //    background-image: url('../img/artists/#{$image}.jpg')
-  //    background-size: contain
-
   .wrapper
     margin: 10px
     position: relative
     width: $card-width
     height: $card-width
-    .wide &
-      width: 2 * $card-width + 30px + 20px
 
     &:hover
       div
         width: 100%
         height: 100%
         box-sizing: border-box
-        background-image: url('https://picsum.photos/240/240')
-        background-size: contain
-        filter: blur(2px)
-        mix-blend-mode: color
+        background-color: pink
+        mix-blend-mode: hard-light
       .title
         transform: translate($card-width*0.04) scale(1.08)
       .description
@@ -116,25 +113,18 @@
     .wrapper
       width: 78vw
       height: 78vw
-      .wide &
-        height: 39vw
+      background-size: contain
       &:hover
         .title
           transform: translate(80vw*0.04) scale(1.08)
         .description
           transform: translate(-80vw*0.04) scale(1.08)
     .text
-      font-size: 1.4em
+      font-size: 3.4em
 
     .card-container
-      margin-bottom: 22px
+      margin: 22px 0
       flex-wrap: wrap
-      > .wrapper
-        order: 1
-      > aside
-        order: 2
-    aside
-      width: 100px
     .empty
       display: none
 </style>
