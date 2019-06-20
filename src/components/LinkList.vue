@@ -42,28 +42,29 @@
     display: flex
     flex-direction: column
     align-items: center
-    justify-content: space-evenly
     height: 100px
-    mix-blend-mode: difference
+    mix-blend-mode: soft-light
+    &:hover
+      mix-blend-mode: hard-light
 
 
   .link-icon
     font-size: 1.2em
 
   a
-    color: #282861
     color: white
     &:hover
       color: lighten(#282861, 20%)
-    &:visited
-      color: maroon
 
 
   @media only screen and (max-device-width: 480px)
     ul
-      flex-direction: row
-      justify-content: space-around
+      flex-direction: row-reverse
       height: initial
-      width: 100px
+      mix-blend-mode: hard-light
+    li
+      margin-right: 22px
+    .link-icon
+      font-size: 3.4em
 
 </style>
