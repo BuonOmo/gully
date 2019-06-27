@@ -15,7 +15,7 @@
           <li>
             <a href="https://www.helloasso.com/associations/artfact/evenements/festival-gully-sound-7"
                title="Achetez vos préventes pour vendredi, samedi ou les deux soirs.">
-              Billeterie
+              Billetterie
             </a>
           </li>
           <li>

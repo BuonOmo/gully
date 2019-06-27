@@ -94,7 +94,7 @@
     </div>
 
     <h1>Samedi 21 juillet
-      <nobr>21h-5h</nobr>
+      <nobr>21h-6h</nobr>
     </h1>
     <!--(grosse photo que tu appelles "Moon Race Battle / Sound clash)-->
     <!--(Afu-Ra feat Digital Cut) sapin (Mahom)-->
