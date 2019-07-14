@@ -93,7 +93,7 @@
       ></artist-card>
     </div>
 
-    <h1>Samedi 21 juillet
+    <h1>Samedi 20 juillet
       <nobr>21h-6h</nobr>
     </h1>
     <!--(grosse photo que tu appelles "Moon Race Battle / Sound clash)-->
