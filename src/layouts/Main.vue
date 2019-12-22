@@ -12,12 +12,12 @@
               Programmation
             </v-link>
           </li>
-          <li>
+          <!-- <li>
             <a href="https://www.helloasso.com/associations/artfact/evenements/festival-gully-sound-7"
                title="Achetez vos préventes pour vendredi, samedi ou les deux soirs.">
               Billetterie
             </a>
-          </li>
+          </li> -->
           <li>
             <v-link href="/infos" alt="Pour tout savoir sur le Gully, accès au festival, la bouffe, s'il pleut, etc.">
               Infos pratiques

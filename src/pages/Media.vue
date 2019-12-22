@@ -1,7 +1,7 @@
 <template>
   <detail-layout>
     <h1>
-      D&eacute;j&agrave; 7 ans  que l'aventure a d&eacute;but&eacute;, merci &agrave; vous !
+      D&eacute;j&agrave; 8 ans  que l'aventure a d&eacute;but&eacute;, merci &agrave; vous !
     </h1>
     <div class="poster-container">
       <img v-for="poster in posters"
@@ -11,17 +11,19 @@
                     'large': currentPoster !== null}"
            :src="currentPoster === poster ? poster.large : poster.small"
            :alt="poster.title" :download="poster.title"
-           @click="setCurrentPoster(poster)">
+           @click="setCurrentPoster(poster)"
+           :key="poster.title">
     </div>
 
     <template v-for="photoGroup in reversePhotoInformation">
-      <h1>{{photoGroup.text}}</h1>
-      <div class="grid-photo-container">
+      <h1 :key="photoGroup.text">{{photoGroup.text}}</h1>
+      <div class="grid-photo-container" :key="photoGroup.text">
         <img v-for="n in photoGroup.count"
              class="with-action"
              @click="showModal(photoGroup, n)"
              :src="loadImage(photoGroup.edition, n, 400)"
-             :alt="`GULLY_${photoGroup.edition}_${n}.jpg`">
+             :alt="`GULLY_${photoGroup.edition}_${n}.jpg`"
+             :key="`GULLY_${photoGroup.edition}_${n}.jpg`">
       </div>
     </template>
     <modal-component v-if="isModal" @close="hideModal()">

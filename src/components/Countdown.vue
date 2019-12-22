@@ -20,7 +20,7 @@
     </div>
     <div class="alternative text-container marquee">
       <div class="text-content">
-        19 <span class="color accent">&</span> 20 juillet
+        17 <span class="color accent">&</span> 18 juillet
         {{ date.getFullYear() }}
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         –

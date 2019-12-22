@@ -19,7 +19,7 @@
     },
     data () {
       return {
-        date: new Date("Fri July 19 18:00:00 2019 UTC+2")
+        date: new Date("Fri July 16 18:00:00 2020 UTC+2")
       }
     }
   }
