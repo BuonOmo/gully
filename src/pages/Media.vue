@@ -144,6 +144,7 @@
 <style lang="sass">
 
   $photo-margin: 5px
+  $posters-count: 8
 
   .with-action
     cursor: pointer
@@ -155,9 +156,9 @@
     align-items: center
 
   .poster
-    width: 14%
+    width: 99% / $posters-count
     &.large
-      width: 16%
+      width: 99% / ($posters-count - 1)
     &.current
       margin-top: 5px
       width: 100%
