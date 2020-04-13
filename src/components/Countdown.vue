@@ -20,12 +20,11 @@
     </div>
     <div class="alternative text-container marquee">
       <div class="text-content">
-        17 <span class="color accent">&</span> 18 juillet
-        {{ date.getFullYear() }}
+        &nbsp;&nbsp;16<span class="color accent">,</span> 17 <span class="color accent">&</span> 18 juillet
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         –
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        Arandas (Ain)
+        Arandas (01)
       </div>
     </div>
   </span>
