@@ -6,7 +6,7 @@
 
     <h1>Communique — Festival Gully Sound</h1>
 
-    <p>En ces temps incertains nous souhaitons partager ces réflexions avec vous :</p>
+    <p>En ces temps incertains nous souhaitons partager ces r&eacute;flexions avec vous :</p>
     <p>
     💥🌱 Habituellement le printemps est synonyme d’excitation pour les amateurs de festivals. Le
     lancement des programmations, les rêves de son roadtrip estival, les premières vibes en extérieur,
@@ -70,7 +70,7 @@
     <img src="../img/posters/900/8.jpg" alt="La huitième édition du Gully !">
 
 
-    <h1>Appel à candidature — Scene ouverte</h1>
+    <h1>Appel a candidature — Scene ouverte</h1>
 
     <p>
       😎 Amateur.rice.s de musique Oyé Oyé ! Tu tâtes le vinyl le samedi soir avec les copains,
