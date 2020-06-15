@@ -20,7 +20,7 @@
     </div>
     <div class="alternative text-container marquee">
       <div class="text-content">
-        &nbsp;&nbsp;16<span class="color accent">,</span> 17 <span class="color accent">&</span> 18 juillet
+        &nbsp;&nbsp;15<span class="color accent">,</span> 16 <span class="color accent">&</span> 17 juillet
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         –
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
