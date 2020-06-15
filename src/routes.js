@@ -1,4 +1,4 @@
-export const generatePageTitle = (section = '2020') => `Festival Gully Sound #8 - ${section}`
+export const generatePageTitle = (section = '2021') => `Festival Gully Sound #8 - ${section}`
 
 export default {
   '/': {
