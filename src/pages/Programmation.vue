@@ -72,6 +72,8 @@
     <p>💋 Prenez soin de vous !</p>
     <p>💋 Bisous, câlins et autres interdits</p>
 
+    <img :src="poster" alt="poster">
+
     <!-- <h1>Programmation a venir...</h1>
     <p class="justify">
     D'ici quelques temps, tu trouveras ici la programmation pour les soirées du jeudi 16, vendredi
@@ -87,12 +89,14 @@
   import DetailLayout from '../layouts/Detail.vue'
   import ArtistCard from '../components/ArtistCard.vue'
   import PROG_FILE from '../img/programmation.jpg'
+  import POSTER from '../img/posters/900/8.jpg'
   // import ARTISTS from '../img/artists/index.yml'
 
   export default {
     data() {
       return {
         progFile: PROG_FILE,
+        poster: POSTER
         // artists: ARTISTS
       }
     },
