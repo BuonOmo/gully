@@ -20,7 +20,7 @@
     "cross-env": "^5.0.0",
     "css-loader": "^0.28.4",
     "file-loader": "^0.11.1",
-    "node-sass": "^4.12.0",
+    "node-sass": "^9.0.0",
     "now": "^11.4.6",
     "sass-loader": "^6.0.3",
     "smoothscroll-polyfill": "^0.3.5",
